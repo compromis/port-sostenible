@@ -5,6 +5,6 @@ module.exports = {
   // add your custom config here
   // https://stylelint.io/user-guide/configuration
   rules: {
-    'number-leading-zero': 'off'
+    'number-leading-zero': null
   }
 }

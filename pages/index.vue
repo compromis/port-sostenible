@@ -1,122 +1,136 @@
 <template>
-  <div>
-    <section id="comparison" class="section comparison">
-      <div class="container">
-        <h2 class="comparison-headline">
-          Conseqüències<br>de l'ampliació del port
-        </h2>
-        <CoastlineComparison client:idle />
-        <p>Lorem ipsum</p>
+  <LocomotiveScroll
+    ref="scroller"
+    :getted-options="{
+      direction: 'vertical'
+    }"
+  >
+    <section data-scroll-section>
+      <div data-scroll data-scroll-repeat class="wrapper">
+        <div id="target" />
+        <div id="target-2" />
+        <div class="comparison-container" data-scroll data-scroll-sticky data-scroll-target="#target">
+          <div class="box-wrapper">
+            <div class="box a" />
+            <div class="box b" :style="{ width: widthComparisonVw }" />
+          </div>
+        </div>
+        <div class="year" data-scroll data-scroll-sticky data-scroll-target="#target-2">
+          Text
+        </div>
       </div>
     </section>
-    <section id="lies" class="section lies">
-      <div class="container">
-        <h2 class="lies-headline">
-          <span class="highlight">10 mentides</span>
-          <span>sobre l'ampliació</span>
-          <span>del port</span>
-        </h2>
-        <ol class="lies-list">
-          <li>
-            <p class="lie">
-              <del>
-                Es crearan milers de llocs de treball
-              </del>
-              <span class="false">FALS</span>
-            </p>
-
-            <p class="truth">
-              El personal del port ha denunciat que amb l'automatització de la terminal es poden
-              <strong>destruir fins a 500 llocs de treball</strong>
-            </p>
-          </li>
-        </ol>
-      </div>
-    </section>
-    <section id="headlines" class="headlines">
-      <div class="container">
-        <h2 class="headlines-headline">
-          Una ampliació que no fa bé a ningú...
-        </h2>
-        <img src="" alt="Titular de Valencia Plaza: Los estibadores exponen que la ampliación del Puerto de València destruirá 500 empleos">
-        <img src="" alt="Titular de Valencia Plaza: Los estibadores exponen que la ampliación del Puerto de València destruirá 500 empleos">
-        <img src="" alt="Titular de Valencia Plaza: Los estibadores exponen que la ampliación del Puerto de València destruirá 500 empleos">
-        <img src="" alt="Titular de Valencia Plaza: Los estibadores exponen que la ampliación del Puerto de València destruirá 500 empleos">
-      </div>
-    </section>
-    <section id="videos" class="videos">
-      <div class="container">
-        <h2 class="videos-headline">
-          Una ampliació <span>sense consens</span>
-        </h2>
-        <Videos client:visible />
-      </div>
-    </section>
-    <section id="proposals" class="proposals">
-      <div class="container">
-        <h2 class="proposals-headline">
-          <span>10 propostes</span>
-          <span>per un port</span>
-          <span>més sostenible</span>
-        </h2>
-        <ol>
-          <li>Proposta 1</li>
-        </ol>
-      </div>
-    </section>
-  </div>
+    <div class="filler" />
+  </LocomotiveScroll>
 </template>
 
 <script>
-export default {}
+export default {
+
+  data () {
+    return {
+      widthComparison: 0
+    }
+  },
+
+  computed: {
+    widthComparisonVw () {
+      return this.widthComparison + 'vw'
+    }
+  },
+
+  mounted () {
+    this.$refs.scroller.locomotive.on('scroll', this.handleScroll)
+  },
+
+  methods: {
+    handleScroll ({ scroll }) {
+      const vh = window.innerHeight * 0.01
+      this.widthComparison = (scroll.y * 100) / (300 * vh)
+    }
+  }
+}
 </script>
 
 <style lang="scss">
-  @import '../styles/_variables';
+.wrapper {
+  position: relative;
+  height: 700vh;
+  background: fuchsia;
+}
 
-  h2 {
-    font-size: clamp(4rem, 7.5vw, 7rem);
-    line-height: 1.1;
-    margin: 0;
+#target {
+  position: absolute;
+  top: -100vh;
+  bottom: 100vh;
+  left: 0;
+  right: 0;
+  background: yellow;
+}
+
+#target-2 {
+  position: absolute;
+  top: -100vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: green;
+}
+
+.comparison-container {
+  background: blue;
+  position: absolute;
+  top: -100vh;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  opacity: .5;
+}
+
+.filler {
+  height: 1000vh;
+}
+
+.box-wrapper {
+  position: relative;
+  background: blueviolet;
+  flex-grow: 1;
+}
+
+.box {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: aqua;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  &.a {
+    background: fuchsia;
+    background: url(https://images.unsplash.com/photo-1633295979780-5445615c2cbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2970&q=80);
+    width: 100vw;
   }
 
-  .container {
-    max-width: 1200px;
-    padding: 0 3rem;
-    margin: 0 auto;
+  &.b {
+    background: aquamarine;
+    background: url(https://images.unsplash.com/photo-1633334889899-35d144cdfd8c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2970&q=80);
+    width: 25vw;
   }
+}
 
-  .section {
-    padding-bottom: 30vh;
-  }
-
-  .comparison {
-    p {
-      font-size: $text-base;
-      margin: 0;
-      margin-bottom: 1rem;
-    }
-  }
-
-  .lies {
-    background: $white;
-
-    h2 {
-      transform: translateY(-50%);
-
-      span {
-        display: block;
-        background: $white;
-        width: fit-content;
-        line-height: .5;
-        margin-bottom: .15em;
-        padding: .2em;
-        padding-top: .4em;
-
-        &.highlight {
-          background: $yellow;
-        }
-      }
-    }
-  }
+.year {
+  background: rgba(red, .5);
+  position: absolute;
+  top: -100vh;
+  bottom: 0;
+  right: 10px;
+  left: 10px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>

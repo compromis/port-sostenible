@@ -1,27 +1,67 @@
 <template>
-  <LocomotiveScroll
-    ref="scroller"
-    :getted-options="{
-      direction: 'vertical'
-    }"
-  >
-    <section data-scroll-section>
-      <div data-scroll data-scroll-repeat class="wrapper">
-        <div id="target" />
-        <div id="target-2" />
-        <div class="comparison-container" data-scroll data-scroll-sticky data-scroll-target="#target">
-          <div class="box-wrapper">
-            <div class="box a" />
-            <div class="box b" :style="{ width: widthComparisonVw }" />
+  <div>
+    <LocomotiveScroll
+      ref="scroller"
+      :getted-options="{
+        direction: 'vertical'
+      }"
+    >
+      <div class="god-holder">
+        <section data-scroll-section class="comparison-sticky">
+          <div data-scroll data-scroll-repeat class="wrapper">
+            <div id="target-0" />
+            <div class="comparison-container" data-scroll data-scroll-sticky data-scroll-target="#target-0">
+              <div class="box-wrapper">
+                <div class="box a" />
+                <div class="box b" :style="{ width: widthComparisonVw }" />
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="year" data-scroll data-scroll-sticky data-scroll-target="#target-2">
-          Text
-        </div>
+        </section>
+        <section data-scroll-section class="year-1-sticky">
+          <div data-scroll data-scroll-repeat class="wrapper">
+            <div id="target" />
+            <div
+              class="year-1"
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#target"
+            >
+              1960
+            </div>
+          </div>
+        </section>
+        <section data-scroll-section class="year-2-sticky">
+          <div data-scroll data-scroll-repeat class="wrapper">
+            <div id="target-2" />
+            <div
+              class="year-1"
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#target-2"
+            >
+              2021
+            </div>
+          </div>
+        </section>
+        <section data-scroll-section class="year-3-sticky">
+          <div data-scroll data-scroll-repeat class="wrapper">
+            <div id="target-3" />
+            <div
+              class="year-1"
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#target-3"
+            >
+              Ultimo senyor
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-    <div class="filler" />
-  </LocomotiveScroll>
+      I'm overflowing
+      <div class="filler" />
+    </LocomotiveScroll>
+  </div>
 </template>
 
 <script>
@@ -53,10 +93,60 @@ export default {
 </script>
 
 <style lang="scss">
+.god-holder {
+  position: relative;
+}
+
 .wrapper {
   position: relative;
   height: 700vh;
-  background: fuchsia;
+}
+
+.year-1-sticky {
+  position: absolute;
+  top: 0;
+  bottom: 70%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  .wrapper {
+    height: 250vh;
+  }
+}
+
+.year-2-sticky {
+  position: absolute;
+  top: 30%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  .wrapper {
+    height: 250vh;
+  }
+}
+
+.year-3-sticky {
+  position: absolute;
+  top: 70%;
+  bottom: -50%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  .wrapper {
+    height: 250vh;
+  }
+}
+
+#target-0 {
+  position: absolute;
+  top: -100vh;
+  bottom: 100vh;
+  left: 0;
+  right: 0;
 }
 
 #target {
@@ -65,16 +155,22 @@ export default {
   bottom: 100vh;
   left: 0;
   right: 0;
-  background: yellow;
 }
 
 #target-2 {
   position: absolute;
   top: -100vh;
-  bottom: 0;
+  bottom: 100vh;
   left: 0;
   right: 0;
-  background: green;
+}
+
+#target-3 {
+  position: absolute;
+  top: -100vh;
+  bottom: 100vh;
+  left: 0;
+  right: 0;
 }
 
 .comparison-container {
@@ -121,10 +217,36 @@ export default {
   }
 }
 
-.year {
+.year-1 {
   background: rgba(red, .5);
   position: absolute;
   top: -100vh;
+  bottom: 0;
+  right: 10px;
+  left: 10px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.year-2 {
+  background: rgba(red, .5);
+  position: absolute;
+  top: -100vh;
+  bottom: 0;
+  right: 10px;
+  left: 10px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.year-3 {
+  background: rgba(red, .5);
+  position: absolute;
+  top: -10vh;
   bottom: 0;
   right: 10px;
   left: 10px;

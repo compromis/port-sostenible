@@ -7,60 +7,61 @@
         smooth: true
       }"
     >
-      <div class="god-holder">
-        <section data-scroll-section class="comparison-sticky">
-          <div data-scroll data-scroll-repeat class="wrapper">
-            <div id="target-0" />
-            <div class="comparison-container" data-scroll data-scroll-sticky data-scroll-target="#target-0">
-              <div class="box-wrapper">
-                <div class="box a" />
-                <div class="box b" :style="{ width: widthComparisonVw }" />
+      <div class="comparison">
+        <section data-scroll-section class="comparison-section images">
+          <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
+            <div id="rail-images" class="rail" />
+            <div class="comparison-slide" data-scroll data-scroll-sticky data-scroll-target="#rail-images">
+              <div class="image-wrapper">
+                <div class="image image-a" />
+                <div class="image image-b" :style="{ '--progress': comparisonProgress }" />
               </div>
             </div>
           </div>
         </section>
-        <section data-scroll-section class="year-1-sticky">
-          <div data-scroll data-scroll-repeat class="wrapper">
-            <div id="target" />
+        <section data-scroll-section class="comparison-section year-1960">
+          <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
+            <div id="rail-1960" class="rail" />
             <div
-              class="year-1"
+              class="comparison-slide text"
               data-scroll
               data-scroll-sticky
-              data-scroll-target="#target"
+              data-scroll-target="#rail-1960"
             >
               1960
             </div>
           </div>
         </section>
-        <section data-scroll-section class="year-2-sticky">
-          <div data-scroll data-scroll-repeat class="wrapper">
-            <div id="target-2" />
+        <section data-scroll-section class="comparison-section year-2021">
+          <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
+            <div id="rail-2021" class="rail" />
             <div
-              class="year-1"
+              class="comparison-slide text top-0"
               data-scroll
               data-scroll-sticky
-              data-scroll-target="#target-2"
+              data-scroll-target="#rail-2021"
             >
               2021
             </div>
           </div>
         </section>
-        <section data-scroll-section class="year-3-sticky">
-          <div data-scroll data-scroll-repeat class="wrapper">
-            <div id="target-3" />
+        <section data-scroll-section class="comparison-section header">
+          <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
+            <div id="rail-header" class="rail" />
             <div
-              class="year-1"
+              class="comparison-slide text text-header top-0"
               data-scroll
               data-scroll-sticky
-              data-scroll-target="#target-3"
+              data-scroll-target="#rail-header"
             >
-              Ultimo senyor
+              Les conseqüències de <br> l'amplicació del port
             </div>
           </div>
         </section>
       </div>
-      I'm overflowing
-      <div class="filler" />
+      <div class="filler">
+        filler
+      </div>
     </LocomotiveScroll>
   </div>
 </template>
@@ -75,8 +76,8 @@ export default {
   },
 
   computed: {
-    widthComparisonVw () {
-      return this.widthComparison + 'vw'
+    comparisonProgress () {
+      return this.widthComparison + '%'
     }
   },
 
@@ -87,172 +88,126 @@ export default {
   methods: {
     handleScroll ({ scroll }) {
       const vh = window.innerHeight * 0.01
-      this.widthComparison = (scroll.y * 100) / (125 * vh)
+      const progress = (scroll.y * 100) / (125 * vh)
+      this.widthComparison = progress > 100 ? 100 : progress
     }
   }
 }
 </script>
 
 <style lang="scss">
-.god-holder {
+:root {
+  --comparison-height: 525vh;
+}
+
+.comparison {
   position: relative;
-  height: 525vh;
-}
+  height: var(--comparison-height);
 
-.wrapper {
-  position: relative;
-  height: 450vh;
-}
+  &-section {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 
-.year-1-sticky {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 250vh;
-  right: 0;
-  z-index: 1000;
+    &-wrapper {
+      position: relative;
+    }
 
-  .wrapper {
-    height: 250vh;
+    &.images {
+      position: static;
+
+      .comparison-section-wrapper {
+        height: calc(var(--comparison-height) - 150vh);
+      }
+    }
+
+    &.year-1960 {
+      top: 0;
+
+      .comparison-section-wrapper {
+        height: 150vh;
+      }
+    }
+
+    &.year-2021 {
+      top: 125vh;
+
+      .comparison-section-wrapper {
+        height: 150vh;
+      }
+    }
+
+    &.header {
+      top: 250vh;
+
+      .comparison-section-wrapper {
+        height: 200vh;
+      }
+    }
   }
-}
 
-.year-2-sticky {
-  position: absolute;
-  top: 225vh;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+  &-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
 
-  .wrapper {
-    height: 125vh;
+    &.text {
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: clamp(3rem, 12vw, 15rem);
+      font-family: $headings-font-family;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.05;
+    }
+
+    &.top-0 {
+      top: 0;
+    }
   }
-}
 
-.year-3-sticky {
-  position: absolute;
-  top: 325vh;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-
-  .wrapper {
-    height: 200vh;
+  .rail {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
-}
 
-#target-0 {
-  position: absolute;
-  top: -100vh;
-  bottom: 100vh;
-  left: 0;
-  right: 0;
-}
+  .image-wrapper {
+    position: relative;
+    flex-grow: 1;
+  }
 
-#target {
-  position: absolute;
-  top: -100vh;
-  bottom: 100vh;
-  left: 0;
-  right: 0;
-}
+  .image {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
 
-#target-2 {
-  position: absolute;
-  top: -100vh;
-  bottom: 100vh;
-  left: 0;
-  right: 0;
-}
+    &-a {
+      background-image: url('../assets/beach-bn.webp');
+    }
 
-#target-3 {
-  position: absolute;
-  top: -100vh;
-  bottom: 100vh;
-  left: 0;
-  right: 0;
-}
-
-.comparison-container {
-  background: blue;
-  position: absolute;
-  top: -100vh;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  height: 100vh;
-  display: flex;
-  opacity: .5;
+    &-b {
+      background-image: url('../assets/beach-col.webp');
+      clip-path: polygon(0 0, var(--progress) 0, var(--progress) 100%, 0% 100%);
+    }
+  }
 }
 
 .filler {
   height: 1000vh;
-}
-
-.box-wrapper {
-  position: relative;
-  background: blueviolet;
-  flex-grow: 1;
-}
-
-.box {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  background: aqua;
-  top: 0;
-  left: 0;
-  bottom: 0;
-
-  &.a {
-    background: fuchsia;
-    background: url(https://images.unsplash.com/photo-1633295979780-5445615c2cbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2970&q=80);
-    width: 100vw;
-  }
-
-  &.b {
-    background: aquamarine;
-    background: url(https://images.unsplash.com/photo-1633334889899-35d144cdfd8c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2970&q=80);
-    width: 25vw;
-  }
-}
-
-.year-1 {
-  background: rgba(red, .5);
-  position: absolute;
-  top: -100vh;
-  bottom: 0;
-  right: 10px;
-  left: 10px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.year-2 {
-  background: rgba(red, .5);
-  position: absolute;
-  top: -100vh;
-  bottom: 0;
-  right: 10px;
-  left: 10px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.year-3 {
-  background: rgba(red, .5);
-  position: absolute;
-  top: -10vh;
-  bottom: 0;
-  right: 10px;
-  left: 10px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: fuchsia;
 }
 </style>

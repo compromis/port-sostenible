@@ -3,7 +3,8 @@
     <LocomotiveScroll
       ref="scroller"
       :getted-options="{
-        direction: 'vertical'
+        direction: 'vertical',
+        smooth: true
       }"
     >
       <div class="god-holder">
@@ -86,7 +87,7 @@ export default {
   methods: {
     handleScroll ({ scroll }) {
       const vh = window.innerHeight * 0.01
-      this.widthComparison = (scroll.y * 100) / (300 * vh)
+      this.widthComparison = (scroll.y * 100) / (125 * vh)
     }
   }
 }
@@ -95,18 +96,19 @@ export default {
 <style lang="scss">
 .god-holder {
   position: relative;
+  height: 525vh;
 }
 
 .wrapper {
   position: relative;
-  height: 700vh;
+  height: 450vh;
 }
 
 .year-1-sticky {
   position: absolute;
   top: 0;
-  bottom: 70%;
   left: 0;
+  height: 250vh;
   right: 0;
   z-index: 1000;
 
@@ -117,27 +119,25 @@ export default {
 
 .year-2-sticky {
   position: absolute;
-  top: 30%;
-  bottom: 0;
+  top: 225vh;
   left: 0;
   right: 0;
   z-index: 1000;
 
   .wrapper {
-    height: 250vh;
+    height: 125vh;
   }
 }
 
 .year-3-sticky {
   position: absolute;
-  top: 70%;
-  bottom: -50%;
+  top: 325vh;
   left: 0;
   right: 0;
   z-index: 1000;
 
   .wrapper {
-    height: 250vh;
+    height: 200vh;
   }
 }
 

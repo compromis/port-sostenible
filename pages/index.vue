@@ -1,14 +1,8 @@
 <template>
-  <div>
-    <LocomotiveScroll
-      ref="scroller"
-      :getted-options="{
-        direction: 'vertical',
-        smooth: true
-      }"
-    >
-      <div class="comparison">
-        <section data-scroll-section class="comparison-section images">
+  <main>
+    <LocomotiveScroll ref="scroller">
+      <header id="Comparison" class="comparison">
+        <div data-scroll-section class="comparison-section images">
           <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
             <div id="rail-images" class="rail" />
             <div class="comparison-slide" data-scroll data-scroll-sticky data-scroll-target="#rail-images">
@@ -18,8 +12,8 @@
               </div>
             </div>
           </div>
-        </section>
-        <section data-scroll-section class="comparison-section year-1960">
+        </div>
+        <div data-scroll-section class="comparison-section year-1960">
           <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
             <div id="rail-1960" class="rail" />
             <div
@@ -31,8 +25,8 @@
               1960
             </div>
           </div>
-        </section>
-        <section data-scroll-section class="comparison-section year-2021">
+        </div>
+        <div data-scroll-section class="comparison-section year-2021">
           <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
             <div id="rail-2021" class="rail" />
             <div
@@ -44,8 +38,8 @@
               2021
             </div>
           </div>
-        </section>
-        <section data-scroll-section class="comparison-section header">
+        </div>
+        <div data-scroll-section class="comparison-section header">
           <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
             <div id="rail-header" class="rail" />
             <div
@@ -54,16 +48,72 @@
               data-scroll-sticky
               data-scroll-target="#rail-header"
             >
-              Les conseqüències de <br> l'amplicació del port
+              <h2>Les conseqüències de <br> l'amplicació del port</h2>
             </div>
           </div>
-        </section>
+        </div>
+      </header>
+      <div class="intro-paragraph" data-scroll-section>
+        <div class="container">
+          <p data-scroll>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea com.
+          </p>
+        </div>
       </div>
-      <div class="filler">
-        filler
-      </div>
+      <section id="Lies" class="lies" data-scroll-section>
+        <div id="scroll-direction" class="container" style="min-height: 200vh;">
+          <h2 data-scroll class="section-header">
+            <strong>10 mentides</strong>
+            <span>sobre l'ampliació</span>
+            <span>del port</span>
+          </h2>
+          <div id="direction" class="marquees">
+            <div class="marquee one">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="6" data-scroll-target="#direction">
+                Fals Fals Fals Fals Fals Fals Fals Fals
+              </span>
+            </div>
+            <div class="marquee two">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-8" data-scroll-target="#direction">
+                Fals Fals Fals Fals
+              </span>
+            </div>
+            <div class="marquee three">
+              <span
+                class="marquee-inner"
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="9"
+                data-scroll-delay="0.05"
+                data-scroll-target="#direction"
+              >
+                Fals Fals Fals Fals Fals Fals Fals
+              </span>
+            </div>
+            <div class="marquee four">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="15" data-scroll-target="#direction">
+                Fals Fals Fals Fals Fals
+              </span>
+            </div>
+            <div class="marquee five">
+              <span
+                class="marquee-inner"
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="-20"
+                data-scroll-delay="0.05"
+                data-scroll-target="#direction"
+              >
+                Fals Fals Fals Fals
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
     </LocomotiveScroll>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -96,118 +146,54 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  --comparison-height: 525vh;
+.marquees {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  top: -50vh;
+  bottom: -50vh;
 }
 
-.comparison {
-  position: relative;
-  height: var(--comparison-height);
+.marquee {
+  position: absolute;
+  font-size: 10vw;
+  white-space: nowrap;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
 
-  &-section {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-
-    &-wrapper {
-      position: relative;
-    }
-
-    &.images {
-      position: static;
-
-      .comparison-section-wrapper {
-        height: calc(var(--comparison-height) - 150vh);
-      }
-    }
-
-    &.year-1960 {
-      top: 0;
-
-      .comparison-section-wrapper {
-        height: 150vh;
-      }
-    }
-
-    &.year-2021 {
-      top: 125vh;
-
-      .comparison-section-wrapper {
-        height: 150vh;
-      }
-    }
-
-    &.header {
-      top: 250vh;
-
-      .comparison-section-wrapper {
-        height: 200vh;
-      }
-    }
+  &.one {
+    top: 33%;
+    transform: translateX(-50vw) rotate(26deg);
   }
 
-  &-slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 100vh;
-    display: flex;
-
-    &.text {
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: clamp(3rem, 12vw, 15rem);
-      font-family: $headings-font-family;
-      text-align: center;
-      text-transform: uppercase;
-      line-height: 1.05;
-    }
-
-    &.top-0 {
-      top: 0;
-    }
+  &.two {
+    top: 45%;
   }
 
-  .rail {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  &.three {
+    top: 55%;
+    transform: rotate(9deg);
   }
 
-  .image-wrapper {
-    position: relative;
-    flex-grow: 1;
+  &.four {
+    top: 68%;
+    transform: translateX(-50vw) rotate(-19deg);
   }
 
-  .image {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-
-    &-a {
-      background-image: url('../assets/beach-bn.webp');
-    }
-
-    &-b {
-      background-image: url('../assets/beach-col.webp');
-      clip-path: polygon(0 0, var(--progress) 0, var(--progress) 100%, 0% 100%);
-    }
+  &.five {
+    top: 63%;
+    transform: translateX(-10vw) rotate(3deg);
   }
 }
 
-.filler {
-  height: 1000vh;
-  background: fuchsia;
+.marquee-inner {
+  display: block;
+  white-space: nowrap;
+  padding: .25em;
+  font-size: 10vw;
+  background: $red;
+  width: fit-content;
 }
 </style>

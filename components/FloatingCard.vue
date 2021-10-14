@@ -1,8 +1,9 @@
 <template>
-  <article class="card">
+  <article :class="['card', type]">
     <div class="card-number top">
       <span>{{ number }}</span>
-      <img src="../assets/icons/x.svg" alt="Mentida">
+      <img v-if="type === 'lie'" src="../assets/icons/x.svg" alt="Fals">
+      <img v-if="type === 'proposal'" src="../assets/icons/tick.svg" alt="Proposta">
     </div>
     <div class="card-text top">
       <slot name="top" />
@@ -12,10 +13,12 @@
     </div>
     <div class="card-number bottom" aria-hidden="true">
       <span>{{ number }}</span>
-      <img src="../assets/icons/x.svg" alt="">
+      <img v-if="type === 'lie'" src="../assets/icons/x.svg" alt="">
+      <img v-if="type === 'proposal'" src="../assets/icons/tick.svg" alt="">
     </div>
     <div class="card-background">
-      <img src="../assets/icons/x-outline.svg" alt="">
+      <img v-if="type === 'lie'" src="../assets/icons/x-outline.svg" alt="">
+      <img v-if="type === 'proposal'" src="../assets/icons/tick-outline.svg" alt="">
     </div>
   </article>
 </template>
@@ -47,13 +50,13 @@ export default {
     "text-bottom text-bottom ."
     "text-bottom text-bottom number-bottom";
   gap: 2rem;
-  background: rgba($black, 1);
-  color: $white;
+  background: var(--card-background);
+  color: var(--card-outline);
   padding: 2.25rem 2rem;
   aspect-ratio: 1 / 1.5;
   box-shadow: 0 0 10rem -2rem rgba($black, .75), 0 0 2rem -.4rem $black;
   border-radius: 1rem;
-  border: 2px $white solid;
+  border: 2px var(--card-outline) solid;
 
   &-text {
     position: relative;
@@ -64,7 +67,7 @@ export default {
     &.top {
       grid-area: text-top;
       text-align: right;
-      color: $red;
+      color: var(--card-accent);
       font-weight: bold;
       max-width: 10ch;
       justify-self: end;
@@ -119,6 +122,21 @@ export default {
     img {
       width: 65%;
     }
+  }
+
+  &.proposal {
+    --card-accent: #{$green};
+    --card-background: #{$white};
+    --card-outline: #{$black};
+
+    box-shadow: 0 0 10rem -2rem rgba($black, .15), 0 0 2rem -.4rem rgba($black, .5);
+    border-color: $white;
+  }
+
+  &.lie {
+    --card-accent: #{$red};
+    --card-background: #{$black};
+    --card-outline: #{$white};
   }
 }
 </style>

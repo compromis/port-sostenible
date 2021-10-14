@@ -69,7 +69,7 @@
           <span>del port</span>
         </h2>
         <div id="scroll-direction" class="container" style="min-height: 200vh;">
-          <div class="cards-list lies">
+          <div class="cards-list">
             <div class="card-wrapper">
               <floating-card type="lie" number="1" data-scroll data-scroll-speed="2">
                 <template #top>
@@ -245,6 +245,158 @@
             </h3>
           </article>
           <div class="line" data-scroll />
+        </div>
+      </section>
+      <section id="Proposals" class="proposals" data-scroll-section>
+        <h2 class="section-header">
+          <strong>10 propostes</strong><br>
+          <span>per un port</span>
+          <span>més sostenible</span>
+        </h2>
+        <div id="scroll-direction" class="container" style="min-height: 200vh;">
+          <div class="cards-list">
+            <div class="card-wrapper">
+              <floating-card type="proposal" number="1" data-scroll data-scroll-speed="2">
+                <template #top>
+                  Es crearan milers de llocs de treball
+                </template>
+                <template #bottom>
+                  El personal del port ha denunciat queamb l'automatització de la terminal es poden destruir fins a 500 llocs de treball
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset">
+              <floating-card type="proposal" number="2" data-scroll data-scroll-speed="3">
+                <template #top>
+                  Té una avaluació ambiental vigent favorable
+                </template>
+                <template #bottom>
+                  L’avaluació de 2007 està caducada
+                </template>
+              </floating-card>
+            </div>
+            <div class="lie-wrapper">
+              <floating-card type="proposal" number="3" data-scroll data-scroll-speed="2">
+                <template #top>
+                  Millorarà l’economia valenciana
+                </template>
+                <template #bottom>
+                  No, sols respon a l’avarícia d’una de les empreses més contaminants del planeta
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="proposal" number="4" data-scroll data-scroll-speed="3">
+                <template #top>
+                  No costarà ni un euro a la ciutadania
+                </template>
+                <template #bottom>
+                  Tindrà un cost directe de, com a mínim, 458 milions públics, el que valen 82 escoles públiques
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="proposal" number="5" data-scroll data-scroll-speed="2">
+                <template #top>
+                  No afectarà l’Albufera ni les platges del sud
+                </template>
+                <template #bottom>
+                  Els dics del Port ja afecten les platges del sud, i posen en perill el parc natural de l’Albufera
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="proposal" number="6" data-scroll data-scroll-speed="3">
+                <template #top>
+                  El Port necessita l’ampliació per a ser competitiu
+                </template>
+                <template #bottom>
+                  El que necessita per a ser més competitiu és la connexió ferroviària del Corredor Mediterrani
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="proposal" number="7" data-scroll data-scroll-speed="2">
+                <template #top>
+                  L’ampliació ja està feta perquè els dics ja es van fer
+                </template>
+                <template #bottom>
+                  Queda la part més important del projecte, l’emplenament d’uns 250 camps de futbol de ciment i àrids
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="proposal" number="8" data-scroll data-scroll-speed="3">
+                <template #top>
+                  S’està escoltant a la ciutadania
+                </template>
+                <template #bottom>
+                  No, actuen de forma unilateral sense escoltar els veïns, els treballadors, els experts, conselleria, ni tampoc a l’Ajuntament
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="proposal" number="9" data-scroll data-scroll-speed="2">
+                <template #top>
+                  El Port de Barcelona farà una ampliació
+                </template>
+                <template #bottom>
+                  Barcelona la va aturar en 2020 per no ser viable econòmicament
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="proposal" number="10" data-scroll data-scroll-speed="3">
+                <template #top>
+                  El govern d’Espanya ha  autoritzat l’ampliació
+                </template>
+                <template #bottom>
+                  El govern ha traslladat a l’Autoritat Portuària (organisme independent), la recomanació de fer un nou informe ambiental
+                </template>
+              </floating-card>
+            </div>
+          </div>
+          <div id="direction-proposals" class="marquees">
+            <div class="marquee one">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4" data-scroll-target="#direction-proposals">
+                Sostenible&nbsp;&nbsp;&nbsp;Sostenible&nbsp;&nbsp;Sostenible
+              </span>
+            </div>
+            <div class="marquee two">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-6" data-scroll-target="#direction-proposals">
+                Participatiu&nbsp;&nbsp;&nbsp;Participatiu&nbsp;&nbsp;&nbsp;Participatiu
+              </span>
+            </div>
+            <div class="marquee three">
+              <span
+                class="marquee-inner"
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="5"
+                data-scroll-delay="0.05"
+                data-scroll-target="#direction-proposals"
+              >
+                Ecologisme&nbsp;&nbsp;&nbsp;Ecologisme&nbsp;&nbsp;&nbsp;Ecologisme&nbsp;&nbsp;&nbsp;Ecologisme
+              </span>
+            </div>
+            <div class="marquee four">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="10" data-scroll-target="#direction-proposals">
+                Treball&nbsp;&nbsp;&nbsp;Treball&nbsp;&nbsp;&nbsp;Treball&nbsp;&nbsp;&nbsp;Treball
+              </span>
+            </div>
+            <div class="marquee five">
+              <span
+                class="marquee-inner"
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="-10"
+                data-scroll-delay="0.05"
+                data-scroll-target="#direction-proposals"
+              >
+                Entorn&nbsp;&nbsp;Entorn&nbsp;&nbsp;Entorn&nbsp;&nbsp;Entorn&nbsp;&nbsp;Entorn&nbsp;&nbsp;Entorn
+              </span>
+            </div>
+          </div>
         </div>
       </section>
     </LocomotiveScroll>

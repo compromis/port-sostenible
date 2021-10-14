@@ -66,15 +66,54 @@
     }
   }
 
+  .article-1, .article-3 {
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+
+  .article-2, .article-4 {
+    margin-top: .75em;
+    margin-bottom: .25em;
+  }
+
   .article-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 2vw;
 
     h3 {
       font-family: Cheltenham, serif;
       font-size: clamp(2rem, 4vw, 4rem);
       line-height: 1.1;
+      text-transform: uppercase;
+    }
+  }
+
+  .article-2 {
+    h3 {
+      font-family: $headings-font-family;
+      font-size: clamp(6.5rem, 10vw, 8rem);
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+  }
+
+  .article-3 {
+    grid-template-columns: .75fr .25fr;
+
+    h3 {
+      font-family: Cheltenham, serif;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+  }
+
+  .article-4 {
+    h3 {
+      font-family: $headings-font-family;
+      font-size: clamp(6.5rem, 10vw, 8rem);
+      line-height: 1.05;
+      text-transform: uppercase;
     }
   }
 }

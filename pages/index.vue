@@ -223,16 +223,28 @@
           </h2>
           <article class="article article-1">
             <h3 data-scroll class="headline">
-              LA FEDERACIÓN DE VECINOS
-              EXIGE QUE SE PARALICE LA AMPLIACIÓN DEL PUERTO DE VALENCIA
+              La federación de vecinos exige que se paralice la ampliación del puerto de València
             </h3>
           </article>
+          <div class="line" data-scroll />
           <article class="article article-2">
             <h3 data-scroll class="headline">
-              LA FEDERACIÓN DE VECINOS
-              EXIGE QUE SE PARALICE LA AMPLIACIÓN DEL PUERTO DE VALENCIA
+              Daños colaterales de la ampliación del puerto de València
             </h3>
           </article>
+          <div class="line" data-scroll />
+          <article class="article article-3">
+            <h3 data-scroll class="headline">
+              La ampliación del Puerto, a costa de la salud de los vecinos de Poblats Marítims
+            </h3>
+          </article>
+          <div class="line" data-scroll />
+          <article class="article article-4">
+            <h3 data-scroll class="headline">
+              Los estibadores exponen que la ampliación del puerto destruye 5.000 empleos
+            </h3>
+          </article>
+          <div class="line" data-scroll />
         </div>
       </section>
     </LocomotiveScroll>

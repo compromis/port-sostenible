@@ -12,12 +12,30 @@
   }
 }
 
+// Proposals
+.proposals {
+  background: $white;
+
+  .section-header {
+    color: $black;
+    font-size: $text-base;
+    font-family: $font-family-sans-serif;
+    text-transform: unset;
+    text-align: right;
+    padding: 2rem;
+  }
+
+  .marquee-inner {
+    background: $green;
+  }
+}
+
 // Headlines
 .headlines {
   background: $black;
   margin-top: -10px;
   font-size: clamp(1rem, 2vw, 3rem);
-  padding: 1.5rem;
+  padding: 4vh 1.5rem 10vh 1.5rem;
 
   .section-header {
     font-family: $headings-font-family;

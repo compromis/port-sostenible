@@ -214,6 +214,27 @@
           </div>
         </div>
       </section>
+      <section id="Headlines" class="headlines" data-scroll-section>
+        <div class="container newspaper-page">
+          <h2 class="section-header" data-scroll>
+            <div class="line" style="margin-bottom: 0.25em;" data-scroll />
+            Una ampliació que<br>no&nbsp;&nbsp;fa&nbsp;&nbsp;bé&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;ningú
+            <div class="line" data-scroll />
+          </h2>
+          <article class="article article-1">
+            <h3 data-scroll class="headline">
+              LA FEDERACIÓN DE VECINOS
+              EXIGE QUE SE PARALICE LA AMPLIACIÓN DEL PUERTO DE VALENCIA
+            </h3>
+          </article>
+          <article class="article article-2">
+            <h3 data-scroll class="headline">
+              LA FEDERACIÓN DE VECINOS
+              EXIGE QUE SE PARALICE LA AMPLIACIÓN DEL PUERTO DE VALENCIA
+            </h3>
+          </article>
+        </div>
+      </section>
     </LocomotiveScroll>
   </main>
 </template>

@@ -1,8 +1,80 @@
-.section-header {
-  color: $white;
-  font-size: $text-base;
-  font-family: $font-family-sans-serif;
-  text-transform: unset;
-  text-align: right;
-  padding: 2rem;
+// Lies
+.lies {
+  padding-bottom: 5rem;
+
+  .section-header {
+    color: $white;
+    font-size: $text-base;
+    font-family: $font-family-sans-serif;
+    text-transform: unset;
+    text-align: right;
+    padding: 2rem;
+  }
+}
+
+// Headlines
+.headlines {
+  background: $black;
+  margin-top: -10px;
+  font-size: clamp(1rem, 2vw, 3rem);
+  padding: 1.5rem;
+
+  .section-header {
+    font-family: $headings-font-family;
+    color: $black;
+    text-align: center;
+    font-size: clamp(3rem, 12vw, 15rem);
+    line-height: 1.05;
+    margin: 0;
+    opacity: 0;
+    transition: .5s ease;
+    transition-delay: .25s;
+    transform: translateY(10%);
+
+    &.is-inview {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .newspaper-page {
+    background: #e7ead0;
+    padding: 2vw;
+  }
+
+  .line {
+    height: 3px;
+    background: $black;
+    width: 0;
+    transition: 1s ease;
+    transition-delay: .25s;
+
+    &.is-inview {
+      width: 100%;
+    }
+  }
+
+  .headline {
+    opacity: 0;
+    transition: .5s ease;
+    transition-delay: .25s;
+    transform: translateY(10%);
+
+    &.is-inview {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .article-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2vw;
+
+    h3 {
+      font-family: Cheltenham, serif;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1.1;
+    }
+  }
 }

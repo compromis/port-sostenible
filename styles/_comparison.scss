@@ -3,7 +3,6 @@
 
   position: relative;
   height: var(--comparison-height);
-  background: greenyellow;
 
   &-section {
     position: absolute;
@@ -113,7 +112,6 @@
 }
 
 .intro-paragraph {
-  background: yellow;
   font-size: $text-base;
   line-height: 1.25;
   margin-bottom: 10vh;

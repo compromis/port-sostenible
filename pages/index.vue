@@ -63,21 +63,123 @@
         </div>
       </div>
       <section id="Lies" class="lies" data-scroll-section>
+        <h2 class="section-header">
+          <strong>10 mentides</strong><br>
+          <span>sobre l'ampliació</span>
+          <span>del port</span>
+        </h2>
         <div id="scroll-direction" class="container" style="min-height: 200vh;">
-          <h2 data-scroll class="section-header">
-            <strong>10 mentides</strong>
-            <span>sobre l'ampliació</span>
-            <span>del port</span>
-          </h2>
+          <div class="cards-list lies">
+            <div class="card-wrapper">
+              <floating-card type="lie" number="1" data-scroll data-scroll-speed="2">
+                <template #top>
+                  Es crearan milers de llocs de treball
+                </template>
+                <template #bottom>
+                  El personal del port ha denunciat queamb l'automatització de la terminal es poden destruir fins a 500 llocs de treball
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset">
+              <floating-card type="lie" number="2" data-scroll data-scroll-speed="3">
+                <template #top>
+                  Té una avaluació ambiental vigent favorable
+                </template>
+                <template #bottom>
+                  L’avaluació de 2007 està caducada
+                </template>
+              </floating-card>
+            </div>
+            <div class="lie-wrapper">
+              <floating-card type="lie" number="3" data-scroll data-scroll-speed="2">
+                <template #top>
+                  Millorarà l’economia valenciana
+                </template>
+                <template #bottom>
+                  No, sols respon a l’avarícia d’una de les empreses més contaminants del planeta
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="lie" number="4" data-scroll data-scroll-speed="3">
+                <template #top>
+                  No costarà ni un euro a la ciutadania
+                </template>
+                <template #bottom>
+                  Tindrà un cost directe de, com a mínim, 458 milions públics, el que valen 82 escoles públiques
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="lie" number="5" data-scroll data-scroll-speed="2">
+                <template #top>
+                  No afectarà l’Albufera ni les platges del sud
+                </template>
+                <template #bottom>
+                  Els dics del Port ja afecten les platges del sud, i posen en perill el parc natural de l’Albufera
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="lie" number="6" data-scroll data-scroll-speed="3">
+                <template #top>
+                  El Port necessita l’ampliació per a ser competitiu
+                </template>
+                <template #bottom>
+                  El que necessita per a ser més competitiu és la connexió ferroviària del Corredor Mediterrani
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="lie" number="7" data-scroll data-scroll-speed="2">
+                <template #top>
+                  L’ampliació ja està feta perquè els dics ja es van fer
+                </template>
+                <template #bottom>
+                  Queda la part més important del projecte, l’emplenament d’uns 250 camps de futbol de ciment i àrids
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="lie" number="8" data-scroll data-scroll-speed="3">
+                <template #top>
+                  S’està escoltant a la ciutadania
+                </template>
+                <template #bottom>
+                  No, actuen de forma unilateral sense escoltar els veïns, els treballadors, els experts, conselleria, ni tampoc a l’Ajuntament
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="lie" number="9" data-scroll data-scroll-speed="2">
+                <template #top>
+                  El Port de Barcelona farà una ampliació
+                </template>
+                <template #bottom>
+                  Barcelona la va aturar en 2020 per no ser viable econòmicament
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="lie" number="10" data-scroll data-scroll-speed="3">
+                <template #top>
+                  El govern d’Espanya ha  autoritzat l’ampliació
+                </template>
+                <template #bottom>
+                  El govern ha traslladat a l’Autoritat Portuària (organisme independent), la recomanació de fer un nou informe ambiental
+                </template>
+              </floating-card>
+            </div>
+          </div>
           <div id="direction" class="marquees">
             <div class="marquee one">
-              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="6" data-scroll-target="#direction">
-                Fals Fals Fals Fals Fals Fals Fals Fals
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4" data-scroll-target="#direction">
+                Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals
               </span>
             </div>
             <div class="marquee two">
-              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-8" data-scroll-target="#direction">
-                Fals Fals Fals Fals
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-6" data-scroll-target="#direction">
+                Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals
               </span>
             </div>
             <div class="marquee three">
@@ -85,16 +187,16 @@
                 class="marquee-inner"
                 data-scroll
                 data-scroll-direction="horizontal"
-                data-scroll-speed="9"
+                data-scroll-speed="5"
                 data-scroll-delay="0.05"
                 data-scroll-target="#direction"
               >
-                Fals Fals Fals Fals Fals Fals Fals
+                Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals
               </span>
             </div>
             <div class="marquee four">
-              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="15" data-scroll-target="#direction">
-                Fals Fals Fals Fals Fals
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="10" data-scroll-target="#direction">
+                Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals
               </span>
             </div>
             <div class="marquee five">
@@ -102,7 +204,7 @@
                 class="marquee-inner"
                 data-scroll
                 data-scroll-direction="horizontal"
-                data-scroll-speed="-20"
+                data-scroll-speed="-10"
                 data-scroll-delay="0.05"
                 data-scroll-target="#direction"
               >
@@ -133,6 +235,7 @@ export default {
 
   mounted () {
     this.$refs.scroller.locomotive.on('scroll', this.handleScroll)
+    this.$refs.scroller.locomotive.update()
   },
 
   methods: {
@@ -146,54 +249,7 @@ export default {
 </script>
 
 <style lang="scss">
-.marquees {
-  position: absolute;
-  right: 0;
-  left: 0;
-  z-index: 1;
-  top: -50vh;
-  bottom: -50vh;
-}
-
-.marquee {
-  position: absolute;
-  font-size: 10vw;
-  white-space: nowrap;
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 1;
-
-  &.one {
-    top: 33%;
-    transform: translateX(-50vw) rotate(26deg);
-  }
-
-  &.two {
-    top: 45%;
-  }
-
-  &.three {
-    top: 55%;
-    transform: rotate(9deg);
-  }
-
-  &.four {
-    top: 68%;
-    transform: translateX(-50vw) rotate(-19deg);
-  }
-
-  &.five {
-    top: 63%;
-    transform: translateX(-10vw) rotate(3deg);
-  }
-}
-
-.marquee-inner {
-  display: block;
-  white-space: nowrap;
-  padding: .25em;
-  font-size: 10vw;
-  background: $red;
-  width: fit-content;
+.hello {
+  color: world;
 }
 </style>

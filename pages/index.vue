@@ -223,15 +223,15 @@
           </h2>
           <a href="https://www.lasprovincias.es/valencia-ciudad/federacion-vecinos-exige-20210413122732-nt.html" target="_blank" rel="noopener" class="article article-1">
             <div>
-              <animated-headline data-scroll data-scroll-offset="20%,0" text="La federación de vecinos exige que se paralice la ampliación del puerto de València" />
               <img
                 data-scroll
                 data-scroll-offset="20%,0"
                 src="~assets/images/lasprovincias.svg"
                 alt="Las Provincias"
                 class="source-logo"
-                style="margin-top: .5em;"
+                style="margin-bottom: .25em;"
               >
+              <animated-headline data-scroll data-scroll-offset="20%,0" text="La federación de vecinos exige que se paralice la ampliación del puerto de València" />
             </div>
             <div data-scroll class="article-video">
               <video
@@ -248,29 +248,29 @@
           </a>
           <div class="line" data-scroll data-scroll-offset="20%,0" />
           <a href="https://www.eldiario.es/comunitat-valenciana/valencia/danos-colaterales-ampliacion-puerto-valencia-erosion-playas-saler-alcanza-dunas-protegidas_1_6487618.html" target="_blank" rel="noopener" class="article article-2">
-            <animated-headline data-scroll data-scroll-offset="20%,0" text="Daños colaterales de la ampliación del puerto de València" />
-            <animated-headline as="p" data-scroll data-scroll-offset="20%,0" text="La erosión de las playas del Saler alcanza ya las dunas protegidas" class="subtitle" />
             <img
               data-scroll
               data-scroll-offset="20%,0"
               src="~assets/images/eldiario.svg"
               alt="eldiario.es"
               class="source-logo"
-              style="margin-bottom: .5em;"
+              style="margin-top: -.25em; margin-bottom: .75em;"
             >
+            <animated-headline data-scroll data-scroll-offset="20%,0" text="Daños colaterales de la ampliación del puerto de València" />
+            <animated-headline as="p" data-scroll data-scroll-offset="20%,0" text="La erosión de las playas del Saler alcanza ya las dunas protegidas" class="subtitle" />
           </a>
           <div class="line" data-scroll data-scroll-offset="20%,0" />
           <a href="https://www.valenciaextra.com/es/valencia/la-ampliacion-del-puerto-a-costa-de-la-salud-de-los-vecinos-de-poblats-maritims_158011_102.html" target="_blank" rel="noopener" class="article article-3">
             <div>
-              <animated-headline data-scroll data-scroll-offset="20%,0" text="La ampliación del Puerto, a costa de la salud de los vecinos de Poblats Marítims" />
               <img
                 data-scroll
                 data-scroll-offset="20%,0"
                 src="~assets/images/valenciaextra.svg"
                 alt="eldiario.es"
                 class="source-logo"
-                style="height: .75em;"
+                style="height: .75em; margin-top: -.25em; margin-bottom: .25em;"
               >
+              <animated-headline data-scroll data-scroll-offset="20%,0" text="La ampliación del Puerto, a costa de la salud de los vecinos de Poblats Marítims" />
             </div>
             <div>
               <p data-scroll data-scroll-offset="35%,0">
@@ -298,14 +298,15 @@
               </video>
             </div>
             <div>
-              <animated-headline data-scroll data-scroll-offset="20%,0" text="Los estibadores exponen que la ampliación del puerto destruye 5.000 empleos" />
               <img
                 data-scroll
+                data-scroll-offset="20%,0"
                 src="~assets/images/valenciaplaza.svg"
                 alt="Valencia Plaza"
                 class="source-logo"
-                style="margin-top: -.25em; height: .6em;"
+                style="margin-bottom: .35em; height: .6em;"
               >
+              <animated-headline data-scroll data-scroll-offset="20%,0" text="Los estibadores exponen que la ampliación del puerto destruye 5.000 empleos" />
             </div>
           </a>
           <div class="line" data-scroll />

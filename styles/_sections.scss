@@ -45,7 +45,8 @@
     line-height: 1.05;
     margin: 0;
     opacity: 0;
-    transition: .5s ease;
+    transition: opacity .5s ease;
+    will-change: opacity;
 
     &.is-inview {
       opacity: 1;
@@ -61,8 +62,9 @@
     height: 3px;
     background: $black;
     width: 0;
-    transition: 1s ease;
+    transition: width 1s ease;
     transition-delay: var(--delay, 0s);
+    will-change: width;
 
     &.is-inview {
       width: 100%;
@@ -72,8 +74,9 @@
   .headline {
     span {
       opacity: 0;
-      transition: .5s ease;
+      transition: opacity .5s ease;
       transition-delay: var(--delay, .25s);
+      will-change: opacity;
     }
 
     &.is-inview span {
@@ -85,8 +88,8 @@
     display: block;
     height: .4em;
     opacity: 0;
-    transition: .5s ease;
-    transition-delay: 1s;
+    transition: opacity .5s ease;
+    will-change: opacity;
 
     &.is-inview {
       opacity: 1;
@@ -148,6 +151,7 @@
   .article-3 {
     display: grid;
     grid-template-columns: .75fr .25fr;
+    gap: 1em;
 
     h3 {
       font-family: Cheltenham, serif;
@@ -186,7 +190,7 @@
 
     h3 {
       font-family: $headings-font-family;
-      font-size: clamp(6.5rem, 10vw, 8rem);
+      font-size: clamp(5.5rem, 12vw, 8rem);
       line-height: 1.05;
       text-transform: uppercase;
     }
@@ -200,6 +204,7 @@
   transition-delay: 1s;
   filter: grayscale(1);
   mix-blend-mode: multiply;
+  will-change: opacity;
 
   video {
     width: 100%;

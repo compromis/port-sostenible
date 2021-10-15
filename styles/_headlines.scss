@@ -1,36 +1,3 @@
-// Lies
-.lies {
-  padding-bottom: 5rem;
-
-  .section-header {
-    color: $white;
-    font-size: $text-base;
-    font-family: $font-family-sans-serif;
-    text-transform: unset;
-    text-align: right;
-    padding: 2rem;
-  }
-}
-
-// Proposals
-.proposals {
-  background: $white;
-
-  .section-header {
-    color: $black;
-    font-size: $text-base;
-    font-family: $font-family-sans-serif;
-    text-transform: unset;
-    text-align: right;
-    padding: 2rem;
-  }
-
-  .marquee-inner {
-    background: $green;
-  }
-}
-
-// Headlines
 .headlines {
   background: $black;
   margin-top: -10px;
@@ -96,20 +63,6 @@
     }
   }
 
-  .article {
-    display: block;
-    color: $black;
-
-    &:hover {
-      text-decoration: none;
-
-      h3 {
-        text-decoration: underline;
-        text-decoration-color: rgba($black, .1);
-      }
-    }
-  }
-
   .article-1,
   .article-3 {
     margin-top: .5em;
@@ -135,6 +88,8 @@
   }
 
   .article-2 {
+    display: block;
+
     h3 {
       font-family: $headings-font-family;
       font-size: clamp(6.5rem, 10vw, 8rem);
@@ -193,6 +148,19 @@
       font-size: clamp(5.5rem, 12vw, 8rem);
       line-height: 1.05;
       text-transform: uppercase;
+    }
+  }
+
+  .article {
+    color: $black;
+
+    &:hover {
+      text-decoration: none;
+
+      h3 {
+        text-decoration: underline;
+        text-decoration-color: rgba($black, .1);
+      }
     }
   }
 }

@@ -26,6 +26,7 @@
   }
 }
 
+// Moving bands
 .marquees {
   position: absolute;
   right: 0;
@@ -79,8 +80,37 @@
   will-change: transform;
 }
 
+// Lies
 .lies {
   background: $black;
+  padding-bottom: 5rem;
+
+  .section-header {
+    color: $white;
+    font-size: $text-base;
+    font-family: $font-family-sans-serif;
+    text-transform: unset;
+    text-align: right;
+    padding: 2rem;
+  }
+}
+
+// Proposals
+.proposals {
+  background: $white;
+
+  .section-header {
+    color: $black;
+    font-size: $text-base;
+    font-family: $font-family-sans-serif;
+    text-transform: unset;
+    text-align: right;
+    padding: 2rem;
+  }
+
+  .marquee-inner {
+    background: $green;
+  }
 }
 
 @media (max-width: $breakpoint-md) {

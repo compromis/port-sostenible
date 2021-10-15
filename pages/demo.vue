@@ -1,185 +1,505 @@
 <template>
-  <LocomotiveScroll
-    :getted-options="{
-      smooth: true,
-      direction: 'vertical',
-      smartphone: {
-        smooth: true,
-        direction: 'vertical',
-      },
-      tablet: {
-        smooth: true,
-        direction: 'vertical',
-      },
-    }"
-  >
-    <div class="example vertical">
-      <header data-scroll-section>
-        <h1>
-          Vertical<br>
-          Scroll
-        </h1>
+  <main>
+    <LocomotiveScroll ref="scroller" :getted-options="{ smooth: true }">
+      <header id="Comparison" class="comparison">
+        <div data-scroll-section class="comparison-section images">
+          <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
+            <div id="rail-images" class="rail" />
+            <div class="comparison-slide" data-scroll data-scroll-sticky data-scroll-target="#rail-images">
+              <div class="image-wrapper">
+                <div class="image image-a" />
+                <div class="image image-b" :style="{ '--progress': comparisonProgress }" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-scroll-section class="comparison-section year-1960">
+          <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
+            <div id="rail-1960" class="rail" />
+            <div
+              class="comparison-slide text"
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#rail-1960"
+            >
+              1960
+            </div>
+          </div>
+        </div>
+        <div data-scroll-section class="comparison-section year-2021">
+          <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
+            <div id="rail-2021" class="rail" />
+            <div
+              class="comparison-slide text top-0"
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#rail-2021"
+            >
+              2021
+            </div>
+          </div>
+        </div>
+        <div data-scroll-section class="comparison-section header">
+          <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
+            <div id="rail-header" class="rail" />
+            <div
+              class="comparison-slide text text-header top-0"
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#rail-header"
+            >
+              <h2>Les conseqüències de <br> l'amplicació del port</h2>
+            </div>
+          </div>
+        </div>
       </header>
-      <div class="example-section" data-scroll-section>
-        <div class="example-content">
-          <div
-            class="example-big-square"
-            data-scroll
-            data-scroll-speed="-0.5"
-          />
-          <div
-            class="example-small-square"
-            data-scroll
-            data-scroll-speed="2.5"
-          />
+      <div class="intro-paragraph" data-scroll-section>
+        <div class="container">
+          <p data-scroll>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea com.
+          </p>
         </div>
       </div>
-      <div class="example-section" data-scroll-section>
-        <div class="example-content">
-          <div
-            class="example-small-square"
-            data-scroll
-            data-scroll-speed="2.5"
-          />
-          <div
-            class="example-big-square"
-            data-scroll
-            data-scroll-speed="-0.5"
-          />
+      <section id="Lies" class="lies" data-scroll-section>
+        <h2 class="section-header">
+          <strong>10 mentides</strong><br>
+          <span>sobre l'ampliació</span>
+          <span>del port</span>
+        </h2>
+        <div id="scroll-direction" class="container" style="min-height: 200vh;">
+          <div class="cards-list">
+            <div class="card-wrapper">
+              <floating-card type="lie" number="1" data-scroll data-scroll-speed="2">
+                <template #top>
+                  Es crearan milers de llocs de treball
+                </template>
+                <template #bottom>
+                  El personal del port ha denunciat queamb l'automatització de la terminal es poden destruir fins a 500 llocs de treball
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset">
+              <floating-card type="lie" number="2" data-scroll data-scroll-speed="3">
+                <template #top>
+                  Té una avaluació ambiental vigent favorable
+                </template>
+                <template #bottom>
+                  L’avaluació de 2007 està caducada
+                </template>
+              </floating-card>
+            </div>
+            <div class="lie-wrapper">
+              <floating-card type="lie" number="3" data-scroll data-scroll-speed="2">
+                <template #top>
+                  Millorarà l’economia valenciana
+                </template>
+                <template #bottom>
+                  No, sols respon a l’avarícia d’una de les empreses més contaminants del planeta
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="lie" number="4" data-scroll data-scroll-speed="3">
+                <template #top>
+                  No costarà ni un euro a la ciutadania
+                </template>
+                <template #bottom>
+                  Tindrà un cost directe de, com a mínim, 458 milions públics, el que valen 82 escoles públiques
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="lie" number="5" data-scroll data-scroll-speed="2">
+                <template #top>
+                  No afectarà l’Albufera ni les platges del sud
+                </template>
+                <template #bottom>
+                  Els dics del Port ja afecten les platges del sud, i posen en perill el parc natural de l’Albufera
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="lie" number="6" data-scroll data-scroll-speed="3">
+                <template #top>
+                  El Port necessita l’ampliació per a ser competitiu
+                </template>
+                <template #bottom>
+                  El que necessita per a ser més competitiu és la connexió ferroviària del Corredor Mediterrani
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="lie" number="7" data-scroll data-scroll-speed="2">
+                <template #top>
+                  L’ampliació ja està feta perquè els dics ja es van fer
+                </template>
+                <template #bottom>
+                  Queda la part més important del projecte, l’emplenament d’uns 250 camps de futbol de ciment i àrids
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="lie" number="8" data-scroll data-scroll-speed="3">
+                <template #top>
+                  S’està escoltant a la ciutadania
+                </template>
+                <template #bottom>
+                  No, actuen de forma unilateral sense escoltar els veïns, els treballadors, els experts, conselleria, ni tampoc a l’Ajuntament
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="lie" number="9" data-scroll data-scroll-speed="2">
+                <template #top>
+                  El Port de Barcelona farà una ampliació
+                </template>
+                <template #bottom>
+                  Barcelona la va aturar en 2020 per no ser viable econòmicament
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="lie" number="10" data-scroll data-scroll-speed="3">
+                <template #top>
+                  El govern d’Espanya ha  autoritzat l’ampliació
+                </template>
+                <template #bottom>
+                  El govern ha traslladat a l’Autoritat Portuària (organisme independent), la recomanació de fer un nou informe ambiental
+                </template>
+              </floating-card>
+            </div>
+          </div>
+          <div id="direction" class="marquees">
+            <div class="marquee one">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4" data-scroll-target="#direction">
+                Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals&nbsp;&nbsp;Fals
+              </span>
+            </div>
+            <div class="marquee two">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-6" data-scroll-target="#direction">
+                Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals
+              </span>
+            </div>
+            <div class="marquee three">
+              <span
+                class="marquee-inner"
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="5"
+                data-scroll-delay="0.05"
+                data-scroll-target="#direction"
+              >
+                Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals
+              </span>
+            </div>
+            <div class="marquee four">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="10" data-scroll-target="#direction">
+                Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals&nbsp;&nbsp;&nbsp;Fals
+              </span>
+            </div>
+            <div class="marquee five">
+              <span
+                class="marquee-inner"
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="-10"
+                data-scroll-delay="0.05"
+                data-scroll-target="#direction"
+              >
+                Fals Fals Fals Fals
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="example-section" data-scroll-section>
-        <div class="example-content">
-          <div
-            class="example-big-square"
-            data-scroll
-            data-scroll-speed="-0.5"
-          />
-          <div
-            class="example-small-square"
-            data-scroll
-            data-scroll-speed="2.5"
-          />
+      </section>
+      <section id="Headlines" class="headlines" data-scroll-section>
+        <div class="container newspaper-page">
+          <h2 class="section-header" data-scroll data-scroll-offset="20%,0">
+            <div class="line" style="margin-bottom: 0.25em;" data-scroll data-scroll-offset="20%,0" />
+            Una ampliació que<br>no&nbsp;&nbsp;fa&nbsp;&nbsp;bé&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;ningú
+            <div class="line" data-scroll style="--delay: .5s;" />
+          </h2>
+          <a href="https://www.lasprovincias.es/valencia-ciudad/federacion-vecinos-exige-20210413122732-nt.html" target="_blank" rel="noopener" class="article article-1">
+            <div>
+              <img
+                data-scroll
+                data-scroll-offset="20%,0"
+                src="~assets/images/lasprovincias.svg"
+                alt="Las Provincias"
+                class="source-logo"
+                style="margin-bottom: .25em;"
+              >
+              <animated-headline data-scroll data-scroll-offset="20%,0" text="La federación de vecinos exige que se paralice la ampliación del puerto de València" />
+            </div>
+            <div data-scroll class="article-video">
+              <video
+                width="320"
+                height="240"
+                loop
+                autoplay
+                playsinline
+                muted
+              >
+                <source src="../assets/videos/exhaust.mp4" type="video/mp4">
+              </video>
+            </div>
+          </a>
+          <div class="line" data-scroll data-scroll-offset="20%,0" />
+          <a href="https://www.eldiario.es/comunitat-valenciana/valencia/danos-colaterales-ampliacion-puerto-valencia-erosion-playas-saler-alcanza-dunas-protegidas_1_6487618.html" target="_blank" rel="noopener" class="article article-2">
+            <img
+              data-scroll
+              data-scroll-offset="20%,0"
+              src="~assets/images/eldiario.svg"
+              alt="eldiario.es"
+              class="source-logo"
+              style="margin-top: -.25em; margin-bottom: .75em;"
+            >
+            <animated-headline data-scroll data-scroll-offset="20%,0" text="Daños colaterales de la ampliación del puerto de València" />
+            <animated-headline as="p" data-scroll data-scroll-offset="20%,0" text="La erosión de las playas del Saler alcanza ya las dunas protegidas" class="subtitle" />
+          </a>
+          <div class="line" data-scroll data-scroll-offset="20%,0" />
+          <a href="https://www.valenciaextra.com/es/valencia/la-ampliacion-del-puerto-a-costa-de-la-salud-de-los-vecinos-de-poblats-maritims_158011_102.html" target="_blank" rel="noopener" class="article article-3">
+            <div>
+              <img
+                data-scroll
+                data-scroll-offset="20%,0"
+                src="~assets/images/valenciaextra.svg"
+                alt="eldiario.es"
+                class="source-logo"
+                style="height: .75em; margin-top: -.15em; margin-bottom: .25em;"
+              >
+              <animated-headline data-scroll data-scroll-offset="20%,0" text="La ampliación del Puerto, a costa de la salud de los vecinos de Poblats Marítims" />
+            </div>
+            <div>
+              <p data-scroll data-scroll-offset="35%,0">
+                Ayer el alcalde de València, Joan Ribó, volvió a pedir a la APV que el proyecto de ampliación de la nueva terminal de
+                contenedores se sometiera a un nuevo estudio de impacto ambiental. Desde la presidencia de la entidad, Aurelio Martínez,
+                señaló que dicha obra esta "cubierta" por el informe medioambiental que la APV obtuvo en 2007 para la ampliación norte.
+              </p>
+              <p data-scroll data-scroll-offset="35%,0">
+                Desde el Puerto quieren modificar el antiguo proyecto para transformar la zona norte en un nuevo 'macromuelle' para contenedores, que conlleva varias acciones. Supone eliminar un contradique -en rojo en la imagen-, realizar una ampliación del 'dique de abrigo" -en verde-, y dragar y rellenar de tierra 137 hectáreas -en marrón-.
+              </p>
+            </div>
+          </a>
+          <div class="line" data-scroll data-scroll-offset="20%,0" style="margin-top: -.25em;" />
+          <a href="https://valenciaplaza.com/los-estibadores-exponen-a-ribo-que-la-ampliacion-del-puerto-de-valencia-destruiria-500-empleos" target="_blank" rel="noopener" class="article article-4">
+            <div data-scroll class="article-video">
+              <video
+                width="320"
+                height="240"
+                loop
+                autoplay
+                playsinline
+                muted
+              >
+                <source src="../assets/videos/estibadores.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div>
+              <img
+                data-scroll
+                data-scroll-offset="20%,0"
+                src="~assets/images/valenciaplaza.svg"
+                alt="Valencia Plaza"
+                class="source-logo"
+                style="margin-bottom: .35em; height: .6em;"
+              >
+              <animated-headline data-scroll data-scroll-offset="20%,0" text="Los estibadores exponen que la ampliación del puerto destruye 5.000 empleos" />
+            </div>
+          </a>
+          <div class="line" data-scroll />
         </div>
-      </div>
-      <footer data-scroll-section>
-        <nuxt-link to="/horizontal-scroll/">
-          Go to Horizontal Scroll
-        </nuxt-link>
-      </footer>
-    </div>
-  </LocomotiveScroll>
+      </section>
+      <section id="Proposals" class="proposals" data-scroll-section>
+        <h2 class="section-header">
+          <strong>10 propostes</strong><br>
+          <span>per un port</span>
+          <span>més sostenible</span>
+        </h2>
+        <div id="scroll-direction" class="container" style="min-height: 200vh;">
+          <div class="cards-list">
+            <div class="card-wrapper">
+              <floating-card type="proposal" number="1" data-scroll data-scroll-speed="2">
+                <template #top>
+                  Es crearan milers de llocs de treball
+                </template>
+                <template #bottom>
+                  El personal del port ha denunciat queamb l'automatització de la terminal es poden destruir fins a 500 llocs de treball
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset">
+              <floating-card type="proposal" number="2" data-scroll data-scroll-speed="3">
+                <template #top>
+                  Té una avaluació ambiental vigent favorable
+                </template>
+                <template #bottom>
+                  L’avaluació de 2007 està caducada
+                </template>
+              </floating-card>
+            </div>
+            <div class="lie-wrapper">
+              <floating-card type="proposal" number="3" data-scroll data-scroll-speed="2">
+                <template #top>
+                  Millorarà l’economia valenciana
+                </template>
+                <template #bottom>
+                  No, sols respon a l’avarícia d’una de les empreses més contaminants del planeta
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="proposal" number="4" data-scroll data-scroll-speed="3">
+                <template #top>
+                  No costarà ni un euro a la ciutadania
+                </template>
+                <template #bottom>
+                  Tindrà un cost directe de, com a mínim, 458 milions públics, el que valen 82 escoles públiques
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="proposal" number="5" data-scroll data-scroll-speed="2">
+                <template #top>
+                  No afectarà l’Albufera ni les platges del sud
+                </template>
+                <template #bottom>
+                  Els dics del Port ja afecten les platges del sud, i posen en perill el parc natural de l’Albufera
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="proposal" number="6" data-scroll data-scroll-speed="3">
+                <template #top>
+                  El Port necessita l’ampliació per a ser competitiu
+                </template>
+                <template #bottom>
+                  El que necessita per a ser més competitiu és la connexió ferroviària del Corredor Mediterrani
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="proposal" number="7" data-scroll data-scroll-speed="2">
+                <template #top>
+                  L’ampliació ja està feta perquè els dics ja es van fer
+                </template>
+                <template #bottom>
+                  Queda la part més important del projecte, l’emplenament d’uns 250 camps de futbol de ciment i àrids
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="proposal" number="8" data-scroll data-scroll-speed="3">
+                <template #top>
+                  S’està escoltant a la ciutadania
+                </template>
+                <template #bottom>
+                  No, actuen de forma unilateral sense escoltar els veïns, els treballadors, els experts, conselleria, ni tampoc a l’Ajuntament
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper">
+              <floating-card type="proposal" number="9" data-scroll data-scroll-speed="2">
+                <template #top>
+                  El Port de Barcelona farà una ampliació
+                </template>
+                <template #bottom>
+                  Barcelona la va aturar en 2020 per no ser viable econòmicament
+                </template>
+              </floating-card>
+            </div>
+            <div class="card-wrapper offset-mini">
+              <floating-card type="proposal" number="10" data-scroll data-scroll-speed="3">
+                <template #top>
+                  El govern d’Espanya ha  autoritzat l’ampliació
+                </template>
+                <template #bottom>
+                  El govern ha traslladat a l’Autoritat Portuària (organisme independent), la recomanació de fer un nou informe ambiental
+                </template>
+              </floating-card>
+            </div>
+          </div>
+          <div id="direction-proposals" class="marquees">
+            <div class="marquee one">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4" data-scroll-target="#direction-proposals">
+                Sostenible&nbsp;&nbsp;&nbsp;Sostenible&nbsp;&nbsp;Sostenible
+              </span>
+            </div>
+            <div class="marquee two">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-6" data-scroll-target="#direction-proposals">
+                Participatiu&nbsp;&nbsp;&nbsp;Participatiu&nbsp;&nbsp;&nbsp;Participatiu
+              </span>
+            </div>
+            <div class="marquee three">
+              <span
+                class="marquee-inner"
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="5"
+                data-scroll-delay="0.05"
+                data-scroll-target="#direction-proposals"
+              >
+                Ecologisme&nbsp;&nbsp;&nbsp;Ecologisme&nbsp;&nbsp;&nbsp;Ecologisme&nbsp;&nbsp;&nbsp;Ecologisme
+              </span>
+            </div>
+            <div class="marquee four">
+              <span class="marquee-inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="10" data-scroll-target="#direction-proposals">
+                Treball&nbsp;&nbsp;&nbsp;Treball&nbsp;&nbsp;&nbsp;Treball&nbsp;&nbsp;&nbsp;Treball
+              </span>
+            </div>
+            <div class="marquee five">
+              <span
+                class="marquee-inner"
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed="-10"
+                data-scroll-delay="0.05"
+                data-scroll-target="#direction-proposals"
+              >
+                Entorn&nbsp;&nbsp;Entorn&nbsp;&nbsp;Entorn&nbsp;&nbsp;Entorn&nbsp;&nbsp;Entorn&nbsp;&nbsp;Entorn
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </LocomotiveScroll>
+  </main>
 </template>
 
 <script>
-export default {}
+export default {
+
+  data () {
+    return {
+      widthComparison: 0
+    }
+  },
+
+  computed: {
+    comparisonProgress () {
+      return this.widthComparison + '%'
+    }
+  },
+
+  mounted () {
+    this.$refs.scroller.locomotive.on('scroll', this.handleScroll)
+    this.$refs.scroller.locomotive.update()
+  },
+
+  methods: {
+    handleScroll ({ scroll }) {
+      const vh = window.innerHeight * 0.01
+      const progress = (scroll.y * 100) / (175 * vh)
+      this.widthComparison = progress > 100 ? 100 : progress
+    }
+  }
+}
 </script>
 
 <style lang="scss">
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-image: url(data:image/png;base64,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);
-  background-color: #9b9b9b;
-  margin: 0;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 400;
-}
-
-h1,
-h2 {
-  font-weight: 400;
-}
-
-.example.horizontal {
-  width: 500vw;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-}
-
-header {
-  padding: 12.5vw 6.25vw;
-
-  h1 {
-    font-size: 11vw;
-    line-height: 1;
-    margin: 0;
-    color: #000;
-  }
-}
-
-footer {
-  padding: 12.5vw 6.25vw;
-
-  a {
-    font-size: 5vw;
-    color: #000;
-  }
-}
-
-.example-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 100%;
-}
-
-.example-big-square {
-  width: 50vw;
-  padding-top: 50vw;
-  background-color: #000;
-}
-
-.example-small-square {
-  width: 25vw;
-  padding-top: 25vw;
-  background-color: #000;
-}
-
-.example-big-image {
-  img {
-    width: 100%;
-    width: 50vw;
-    height: auto;
-    display: block;
-  }
-}
-
-.example.horizontal header {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 12.5vw;
-}
-
-.example.horizontal footer {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 12.5vw;
-}
-
-.example.horizontal .example-section {
-  width: 100vw;
-}
-
-.example.vertical .example-section,
-.example.vertical footer {
-  padding-top: 50vw;
-}
-
-.example-fade-text {
-  padding: 12.5vw 6.25vw;
-
-  h2 {
-    font-size: 5vw;
-  }
+.hello {
+  color: world;
 }
 </style>

@@ -46,12 +46,9 @@
     margin: 0;
     opacity: 0;
     transition: .5s ease;
-    transition-delay: .25s;
-    transform: translateY(10%);
 
     &.is-inview {
       opacity: 1;
-      transform: translateY(0);
     }
   }
 
@@ -65,7 +62,7 @@
     background: $black;
     width: 0;
     transition: 1s ease;
-    transition-delay: .25s;
+    transition-delay: var(--delay, 0s);
 
     &.is-inview {
       width: 100%;
@@ -73,23 +70,51 @@
   }
 
   .headline {
-    opacity: 0;
-    transition: .5s ease;
-    transition-delay: .25s;
-    transform: translateY(10%);
+    span {
+      opacity: 0;
+      transition: .5s ease;
+      transition-delay: var(--delay, .25s);
+    }
 
-    &.is-inview {
+    &.is-inview span {
       opacity: 1;
-      transform: translateY(0);
     }
   }
 
-  .article-1, .article-3 {
+  .source-logo {
+    display: block;
+    height: .4em;
+    opacity: 0;
+    transition: .5s ease;
+    transition-delay: 1s;
+
+    &.is-inview {
+      opacity: 1;
+    }
+  }
+
+  .article {
+    display: block;
+    color: $black;
+
+    &:hover {
+      text-decoration: none;
+
+      h3 {
+        text-decoration: underline;
+        text-decoration-color: rgba($black, .1);
+      }
+    }
+  }
+
+  .article-1,
+  .article-3 {
     margin-top: .5em;
     margin-bottom: .5em;
   }
 
-  .article-2, .article-4 {
+  .article-2,
+  .article-4 {
     margin-top: .75em;
     margin-bottom: .25em;
   }
@@ -113,9 +138,15 @@
       line-height: 1.05;
       text-transform: uppercase;
     }
+
+    p {
+      font-family: Cheltenham, serif;
+      margin-top: -.5em;
+    }
   }
 
   .article-3 {
+    display: grid;
     grid-template-columns: .75fr .25fr;
 
     h3 {
@@ -124,14 +155,59 @@
       line-height: 1.05;
       text-transform: uppercase;
     }
+
+    p {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1rem;
+      line-height: 1.1;
+      opacity: 0;
+      transition: 1s ease;
+      hyphens: auto;
+
+      &.is-inview {
+        opacity: 1;
+      }
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        text-indent: 1.5rem;
+      }
+    }
   }
 
   .article-4 {
+    display: grid;
+    grid-template-columns: .25fr .75fr;
+    gap: 1em;
+    margin-bottom: .75em;
+
     h3 {
       font-family: $headings-font-family;
       font-size: clamp(6.5rem, 10vw, 8rem);
       line-height: 1.05;
       text-transform: uppercase;
     }
+  }
+}
+
+.article-video {
+  display: flex;
+  opacity: 0;
+  transition: opacity .5s ease;
+  transition-delay: 1s;
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.is-inview {
+    opacity: 1;
   }
 }

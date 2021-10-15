@@ -1,6 +1,6 @@
 <template>
   <main>
-    <LocomotiveScroll ref="scroller">
+    <LocomotiveScroll ref="scroller" :getted-options="{ smooth: true }">
       <header id="Comparison" class="comparison">
         <div data-scroll-section class="comparison-section images">
           <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
@@ -216,34 +216,98 @@
       </section>
       <section id="Headlines" class="headlines" data-scroll-section>
         <div class="container newspaper-page">
-          <h2 class="section-header" data-scroll>
-            <div class="line" style="margin-bottom: 0.25em;" data-scroll />
+          <h2 class="section-header" data-scroll data-scroll-offset="20%,0">
+            <div class="line" style="margin-bottom: 0.25em;" data-scroll data-scroll-offset="20%,0" />
             Una ampliació que<br>no&nbsp;&nbsp;fa&nbsp;&nbsp;bé&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;ningú
-            <div class="line" data-scroll />
+            <div class="line" data-scroll style="--delay: .5s;" />
           </h2>
-          <article class="article article-1">
-            <h3 data-scroll class="headline">
-              La federación de vecinos exige que se paralice la ampliación del puerto de València
-            </h3>
-          </article>
-          <div class="line" data-scroll />
-          <article class="article article-2">
-            <h3 data-scroll class="headline">
-              Daños colaterales de la ampliación del puerto de València
-            </h3>
-          </article>
-          <div class="line" data-scroll />
-          <article class="article article-3">
-            <h3 data-scroll class="headline">
-              La ampliación del Puerto, a costa de la salud de los vecinos de Poblats Marítims
-            </h3>
-          </article>
-          <div class="line" data-scroll />
-          <article class="article article-4">
-            <h3 data-scroll class="headline">
-              Los estibadores exponen que la ampliación del puerto destruye 5.000 empleos
-            </h3>
-          </article>
+          <a href="https://www.lasprovincias.es/valencia-ciudad/federacion-vecinos-exige-20210413122732-nt.html" target="_blank" rel="noopener" class="article article-1">
+            <div>
+              <animated-headline data-scroll data-scroll-offset="20%,0" text="La federación de vecinos exige que se paralice la ampliación del puerto de València" />
+              <img
+                data-scroll
+                data-scroll-offset="20%,0"
+                src="~assets/images/lasprovincias.svg"
+                alt="Las Provincias"
+                class="source-logo"
+                style="margin-top: .5em;"
+              >
+            </div>
+            <div data-scroll class="article-video">
+              <video
+                width="320"
+                height="240"
+                loop
+                autoplay
+                playsinline
+                muted
+              >
+                <source src="../assets/videos/exhaust.mp4" type="video/mp4">
+              </video>
+            </div>
+          </a>
+          <div class="line" data-scroll data-scroll-offset="20%,0" />
+          <a href="https://www.eldiario.es/comunitat-valenciana/valencia/danos-colaterales-ampliacion-puerto-valencia-erosion-playas-saler-alcanza-dunas-protegidas_1_6487618.html" target="_blank" rel="noopener" class="article article-2">
+            <animated-headline data-scroll data-scroll-offset="20%,0" text="Daños colaterales de la ampliación del puerto de València" />
+            <animated-headline as="p" data-scroll data-scroll-offset="20%,0" text="La erosión de las playas del Saler alcanza ya las dunas protegidas" class="subtitle" />
+            <img
+              data-scroll
+              data-scroll-offset="20%,0"
+              src="~assets/images/eldiario.svg"
+              alt="eldiario.es"
+              class="source-logo"
+              style="margin-bottom: .5em;"
+            >
+          </a>
+          <div class="line" data-scroll data-scroll-offset="20%,0" />
+          <a href="https://www.valenciaextra.com/es/valencia/la-ampliacion-del-puerto-a-costa-de-la-salud-de-los-vecinos-de-poblats-maritims_158011_102.html" target="_blank" rel="noopener" class="article article-3">
+            <div>
+              <animated-headline data-scroll data-scroll-offset="20%,0" text="La ampliación del Puerto, a costa de la salud de los vecinos de Poblats Marítims" />
+              <img
+                data-scroll
+                data-scroll-offset="20%,0"
+                src="~assets/images/valenciaextra.svg"
+                alt="eldiario.es"
+                class="source-logo"
+                style="height: .75em;"
+              >
+            </div>
+            <div>
+              <p data-scroll data-scroll-offset="35%,0">
+                Ayer el alcalde de València, Joan Ribó, volvió a pedir a la APV que el proyecto de ampliación de la nueva terminal de
+                contenedores se sometiera a un nuevo estudio de impacto ambiental. Desde la presidencia de la entidad, Aurelio Martínez,
+                señaló que dicha obra esta "cubierta" por el informe medioambiental que la APV obtuvo en 2007 para la ampliación norte.
+              </p>
+              <p data-scroll data-scroll-offset="35%,0">
+                Desde el Puerto quieren modificar el antiguo proyecto para transformar la zona norte en un nuevo 'macromuelle' para contenedores, que conlleva varias acciones. Supone eliminar un contradique -en rojo en la imagen-, realizar una ampliación del 'dique de abrigo" -en verde-, y dragar y rellenar de tierra 137 hectáreas -en marrón-.
+              </p>
+            </div>
+          </a>
+          <div class="line" data-scroll data-scroll-offset="20%,0" />
+          <a href="https://valenciaplaza.com/los-estibadores-exponen-a-ribo-que-la-ampliacion-del-puerto-de-valencia-destruiria-500-empleos" target="_blank" rel="noopener" class="article article-4">
+            <div data-scroll class="article-video">
+              <video
+                width="320"
+                height="240"
+                loop
+                autoplay
+                playsinline
+                muted
+              >
+                <source src="../assets/videos/estibadores.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div>
+              <animated-headline data-scroll data-scroll-offset="20%,0" text="Los estibadores exponen que la ampliación del puerto destruye 5.000 empleos" />
+              <img
+                data-scroll
+                src="~assets/images/valenciaplaza.svg"
+                alt="Valencia Plaza"
+                class="source-logo"
+                style="margin-top: -.25em; height: .6em;"
+              >
+            </div>
+          </a>
           <div class="line" data-scroll />
         </div>
       </section>
@@ -426,7 +490,7 @@ export default {
   methods: {
     handleScroll ({ scroll }) {
       const vh = window.innerHeight * 0.01
-      const progress = (scroll.y * 100) / (125 * vh)
+      const progress = (scroll.y * 100) / (175 * vh)
       this.widthComparison = progress > 100 ? 100 : progress
     }
   }

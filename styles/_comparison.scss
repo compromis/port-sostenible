@@ -1,94 +1,14 @@
 .comparison {
   --comparison-height: 500vh;
 
-  background: $green;
-  position: relative;
   height: var(--comparison-height);
+  position: relative;
 
   &-section {
     position: absolute;
     left: 0;
     right: 0;
     z-index: 1000;
-
-    &-wrapper {
-      position: relative;
-    }
-
-    &.images {
-      position: static;
-
-      .comparison-section-wrapper {
-        height: calc(var(--comparison-height) - 85vh);
-      }
-    }
-
-    &.year-1960 {
-      top: 0;
-
-      .comparison-section-wrapper {
-        height: 150vh;
-      }
-    }
-
-    &.year-2021 {
-      top: 125vh;
-
-      .comparison-section-wrapper {
-        height: 150vh;
-      }
-    }
-
-    &.header {
-      top: 250vh;
-
-      .comparison-section-wrapper {
-        height: 250vh;
-      }
-
-      h2 {
-        font-size: inherit;
-        line-height: inherit;
-      }
-    }
-  }
-
-  &-slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 100vh;
-    display: flex;
-
-    &.text {
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: clamp(3rem, 12vw, 15rem);
-      font-family: $headings-font-family;
-      text-align: center;
-      text-transform: uppercase;
-      line-height: 1.05;
-    }
-
-    &.top-0 {
-      top: 0;
-    }
-  }
-
-  .rail {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .image-wrapper {
-    position: relative;
-    flex-grow: 1;
   }
 
   .image {
@@ -116,11 +36,155 @@
   font-size: $text-base;
   line-height: 1.25;
   margin-bottom: 10vh;
-  margin-top: -25vh;
+  margin-top: 25vh;
 
   p {
     max-width: 60ch;
     margin: 0 auto;
     text-align: center;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .comparison {
+    --comparison-height: 408vh;
+
+    &-section,
+    &-texts {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1000;
+    }
+
+    &-texts {
+      z-index: 1100;
+
+      .comparison-section {
+        position: static;
+        height: 150vh;
+
+        &.header {
+          height: 175vh;
+        }
+      }
+    }
+
+    &-section-wrapper {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    &-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: $white;
+      font-family: $headings-font-family;
+      font-size: 5rem;
+
+      &.text-header {
+        h2 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .rail {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .comparison {
+    &-section {
+      &-wrapper {
+        position: relative;
+      }
+
+      &.images {
+        position: static;
+
+        .comparison-section-wrapper {
+          height: calc(var(--comparison-height) - 85vh);
+        }
+      }
+
+      &.year-1960 {
+        top: 0;
+
+        .comparison-section-wrapper {
+          height: 150vh;
+        }
+      }
+
+      &.year-2021 {
+        top: 125vh;
+
+        .comparison-section-wrapper {
+          height: 150vh;
+        }
+      }
+
+      &.header {
+        top: 250vh;
+
+        .comparison-section-wrapper {
+          height: 250vh;
+        }
+
+        h2 {
+          font-size: inherit;
+          line-height: inherit;
+        }
+      }
+    }
+
+    &-slide {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 100vh;
+      display: flex;
+
+      &.text {
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: clamp(3rem, 12vw, 15rem);
+        font-family: $headings-font-family;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.05;
+      }
+
+      &.top-0 {
+        top: 0;
+      }
+    }
+
+    .rail {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .image-wrapper {
+      position: relative;
+      flex-grow: 1;
+    }
+  }
+
+  .intro-paragraph {
+    margin-top: -25vh;
   }
 }

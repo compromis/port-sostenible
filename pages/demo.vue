@@ -1,6 +1,13 @@
 <template>
   <main>
-    <LocomotiveScroll ref="scroller" :getted-options="{ smooth: true }">
+    <LocomotiveScroll
+      ref="scroller"
+      :getted-options="{
+        smooth: true,
+        tablet: { smooth: false, breakpoint: 0 },
+        smartphone: { smooth: false, breakpoint: 0 }
+      }"
+    >
       <header id="Comparison" class="comparison">
         <div data-scroll-section class="comparison-section images">
           <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
@@ -13,42 +20,44 @@
             </div>
           </div>
         </div>
-        <div data-scroll-section class="comparison-section year-1960">
-          <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
-            <div id="rail-1960" class="rail" />
-            <div
-              class="comparison-slide text"
-              data-scroll
-              data-scroll-sticky
-              data-scroll-target="#rail-1960"
-            >
-              1960
+        <div class="comparison-texts">
+          <div data-scroll-section class="comparison-section year-1960">
+            <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
+              <div id="rail-1960" class="rail" />
+              <div
+                class="comparison-slide text"
+                data-scroll
+                data-scroll-sticky
+                data-scroll-target="#rail-1960"
+              >
+                1960
+              </div>
             </div>
           </div>
-        </div>
-        <div data-scroll-section class="comparison-section year-2021">
-          <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
-            <div id="rail-2021" class="rail" />
-            <div
-              class="comparison-slide text top-0"
-              data-scroll
-              data-scroll-sticky
-              data-scroll-target="#rail-2021"
-            >
-              2021
+          <div data-scroll-section class="comparison-section year-2021">
+            <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
+              <div id="rail-2021" class="rail" />
+              <div
+                class="comparison-slide text top-0"
+                data-scroll
+                data-scroll-sticky
+                data-scroll-target="#rail-2021"
+              >
+                2021
+              </div>
             </div>
           </div>
-        </div>
-        <div data-scroll-section class="comparison-section header">
-          <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
-            <div id="rail-header" class="rail" />
-            <div
-              class="comparison-slide text text-header top-0"
-              data-scroll
-              data-scroll-sticky
-              data-scroll-target="#rail-header"
-            >
-              <h2>Les conseqüències de <br> l'amplicació del port</h2>
+          <div data-scroll-section class="comparison-section header">
+            <div data-scroll data-scroll-repeat class="comparison-section-wrapper">
+              <div id="rail-header" class="rail" />
+              <div
+                class="comparison-slide text text-header top-0"
+                data-scroll
+                data-scroll-sticky
+                data-scroll-target="#rail-header"
+              >
+                <h2>Les conseqüències de <br> l'amplicació del port</h2>
+              </div>
             </div>
           </div>
         </div>
@@ -484,6 +493,7 @@ export default {
   },
 
   mounted () {
+    window.addEventListener('scroll', this.handleScrollWindow)
     this.$refs.scroller.locomotive.on('scroll', this.handleScroll)
     this.$refs.scroller.locomotive.update()
   },
@@ -493,6 +503,14 @@ export default {
       const vh = window.innerHeight * 0.01
       const progress = (scroll.y * 100) / (175 * vh)
       this.widthComparison = progress > 100 ? 100 : progress
+    },
+
+    handleScrollWindow () {
+      requestAnimationFrame(() => {
+        const vh = window.innerHeight * 0.01
+        const progress = (window.scrollY * 100) / (200 * vh)
+        this.widthComparison = progress > 100 ? 100 : progress
+      })
     }
   }
 }

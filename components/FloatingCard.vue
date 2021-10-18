@@ -54,7 +54,7 @@ export default {
   color: var(--card-outline);
   padding: 2.25rem 2rem;
   aspect-ratio: 1 / 1.5;
-  box-shadow: 0 0 10rem -2rem rgba($black, .75), 0 0 2rem -.4rem $black;
+  box-shadow: 0 0 7rem -2rem rgba($black, .75), 0 0 2rem -.4rem $black;
   border-radius: 1rem;
   border: 2px var(--card-outline) solid;
 
@@ -143,6 +143,7 @@ export default {
 @media (max-width: $breakpoint-md) {
   .card {
     padding: 1.5rem;
+    box-shadow: 0 0 4rem -2rem rgba($black, .75), 0 0 2rem -.4rem $black;
   }
 }
 </style>

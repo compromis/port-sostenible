@@ -10,7 +10,9 @@
 
 @font-face {
   font-family: 'Cheltenham';
-  src: url('./assets/fonts/cheltenham-italic-700.woff2') format('woff2');
+  src:
+    url('./assets/fonts/cheltenham-italic-700.woff2') format('woff2'),
+    url('./assets/fonts/cheltenham-italic-700.woff') format('woff');
   font-weight: bold;
   font-style: italic;
   font-display: swap;

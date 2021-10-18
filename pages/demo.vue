@@ -71,13 +71,13 @@
           </p>
         </div>
       </div>
-      <section id="Lies" class="lies" data-scroll-section>
+      <section id="Lies" class="lies cards-section" data-scroll-section>
         <h2 class="section-header">
           <strong>10 mentides</strong><br>
           <span>sobre l'ampliació</span>
           <span>del port</span>
         </h2>
-        <div id="scroll-direction" class="container" style="min-height: 200vh;">
+        <div id="scroll-direction" class="container">
           <div class="cards-list">
             <div class="card-wrapper">
               <floating-card type="lie" number="1" data-scroll data-scroll-speed="2">
@@ -99,7 +99,7 @@
                 </template>
               </floating-card>
             </div>
-            <div class="lie-wrapper">
+            <div class="card-wrapper">
               <floating-card type="lie" number="3" data-scroll data-scroll-speed="2">
                 <template #top>
                   Millorarà l’economia valenciana
@@ -277,7 +277,7 @@
                 src="~assets/images/valenciaextra.svg"
                 alt="eldiario.es"
                 class="source-logo"
-                style="height: .75em; margin-top: -.15em; margin-bottom: .25em;"
+                style="margin-top: -.15em; margin-bottom: .25em;"
               >
               <animated-headline data-scroll data-scroll-offset="20%,0" text="La ampliación del Puerto, a costa de la salud de los vecinos de Poblats Marítims" />
             </div>
@@ -313,7 +313,7 @@
                 src="~assets/images/valenciaplaza.svg"
                 alt="Valencia Plaza"
                 class="source-logo"
-                style="margin-bottom: .35em; height: .6em;"
+                style="margin-bottom: .35em;"
               >
               <animated-headline data-scroll data-scroll-offset="20%,0" text="Los estibadores exponen que la ampliación del puerto destruye 5.000 empleos" />
             </div>
@@ -321,13 +321,13 @@
           <div class="line" data-scroll />
         </div>
       </section>
-      <section id="Proposals" class="proposals" data-scroll-section>
+      <section id="Proposals" class="proposals cards-section" data-scroll-section>
         <h2 class="section-header">
           <strong>10 propostes</strong><br>
           <span>per un port</span>
           <span>més sostenible</span>
         </h2>
-        <div id="scroll-direction" class="container" style="min-height: 200vh;">
+        <div id="scroll-direction" class="container">
           <div class="cards-list">
             <div class="card-wrapper">
               <floating-card type="proposal" number="1" data-scroll data-scroll-speed="2">
@@ -349,7 +349,7 @@
                 </template>
               </floating-card>
             </div>
-            <div class="lie-wrapper">
+            <div class="card-wrapper">
               <floating-card type="proposal" number="3" data-scroll data-scroll-speed="2">
                 <template #top>
                   Millorarà l’economia valenciana

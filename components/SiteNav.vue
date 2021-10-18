@@ -4,7 +4,7 @@
     <div class="logo">
       <a href="https://compromis.net">
         <span class="sr-only">Compromís</span>
-        <compromis-logo mono aria-hidden />
+        <div class="logo-wrapper"><compromis-logo mono aria-hidden /></div>
       </a>
     </div>
   </nav>

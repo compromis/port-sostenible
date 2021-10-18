@@ -61,7 +61,7 @@ export default {
   &-text {
     position: relative;
     z-index: 5;
-    font-size: 1.75rem;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
     line-height: 1.25;
 
     &.top {
@@ -137,6 +137,12 @@ export default {
     --card-accent: #{$red};
     --card-background: #{$black};
     --card-outline: #{$white};
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .card {
+    padding: 1.5rem;
   }
 }
 </style>

@@ -1,7 +1,8 @@
 .headlines {
   background: $black;
   margin-top: -10px;
-  font-size: clamp(1rem, 2vw, 3rem);
+  font-size: clamp(1.25rem, 2vw, 3rem);
+  line-height: 1.4;
   padding: 4vh 1.5rem 10vh 1.5rem;
 
   .section-header {
@@ -92,7 +93,7 @@
 
     h3 {
       font-family: $headings-font-family;
-      font-size: clamp(6.5rem, 10vw, 8rem);
+      font-size: clamp(3rem, 5vw, 10rem);
       line-height: 1.05;
       text-transform: uppercase;
     }
@@ -135,6 +136,10 @@
         text-indent: 1.5rem;
       }
     }
+
+    .source-logo {
+      height: .75em;
+    }
   }
 
   .article-4 {
@@ -145,9 +150,13 @@
 
     h3 {
       font-family: $headings-font-family;
-      font-size: clamp(5.5rem, 12vw, 8rem);
+      font-size: clamp(3rem, 5vw, 10rem);
       line-height: 1.05;
       text-transform: uppercase;
+    }
+
+    .source-logo {
+      height: .6em;
     }
   }
 
@@ -182,5 +191,38 @@
 
   &.is-inview {
     opacity: 1;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .headlines {
+    .article-1, .article-3, .article-4 {
+      grid-template-columns: 1fr;
+      margin-top: .8em;
+      margin-bottom: .8em;
+      gap: .5em;
+    }
+
+    .newspaper-page {
+      padding: 3.5vw;
+    }
+
+    .article {
+      .source-logo {
+        height: .9em;
+      }
+    }
+
+    .article-3 {
+      .source-logo {
+        height: 1.5em;
+      }
+    }
+
+    .article-4 {
+      .source-logo {
+        height: 1.2em;
+      }
+    }
   }
 }

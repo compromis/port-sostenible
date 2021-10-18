@@ -31,6 +31,7 @@
                 data-scroll-target="#rail-1960"
               >
                 1960
+                <swipe-up :class="['swipe-up-icon', { scrolled }]" />
               </div>
             </div>
           </div>
@@ -482,7 +483,8 @@ export default {
 
   data () {
     return {
-      widthComparison: 0
+      widthComparison: 0,
+      scrolled: false
     }
   },
 
@@ -502,6 +504,7 @@ export default {
     handleScroll ({ scroll }) {
       const vh = window.innerHeight * 0.01
       const progress = (scroll.y * 100) / (175 * vh)
+      this.scrolled = scroll.y > 10
       this.widthComparison = progress > 100 ? 100 : progress
     },
 
@@ -509,6 +512,7 @@ export default {
       requestAnimationFrame(() => {
         const vh = window.innerHeight * 0.01
         const progress = (window.scrollY * 100) / (200 * vh)
+        this.scrolled = window.scrollY > 10
         this.widthComparison = progress > 100 ? 100 : progress
       })
     }

@@ -45,6 +45,18 @@
   }
 }
 
+.swipe-up-icon {
+  position: absolute;
+  bottom: 2rem;
+  width: 4rem;
+  height: 4rem;
+  transition: .5s ease;
+
+  &.scrolled {
+    opacity: 0;
+  }
+}
+
 @media (max-width: $breakpoint-md) {
   .comparison {
     --comparison-height: 408vh;

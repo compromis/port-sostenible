@@ -268,8 +268,9 @@
                 autoplay
                 playsinline
                 muted
+                poster="~assets/videos/exhaust-poster.jpg"
               >
-                <source src="../assets/videos/exhaust.mp4" type="video/mp4">
+                <source src="~assets/videos/exhaust.mp4" type="video/mp4">
               </video>
             </div>
           </a>
@@ -320,8 +321,9 @@
                 autoplay
                 playsinline
                 muted
+                poster="~assets/videos/estibadors-poster.jpg"
               >
-                <source src="~assets/videos/estibadores.mp4" type="video/mp4">
+                <source src="~assets/videos/estibadors.mp4" type="video/mp4">
               </video>
             </div>
             <div>

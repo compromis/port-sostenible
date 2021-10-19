@@ -1,5 +1,5 @@
 .section-footer {
-  padding: 12vh 1.5rem 3vh 1.5rem;
+  padding: 12vh 0 0;
   background: $white;
 
   h2 {
@@ -12,6 +12,11 @@
     text-align: center;
   }
 
+  .conclusion {
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+
   .calls-to-action {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -20,12 +25,31 @@
 
     .mani {
       grid-column: span 2;
-      border: 4px solid $black;
+      border: 4px solid $orange;
       padding: 1.5rem 1rem 1rem;
-      
+      color: $orange;
+
       h2 {
         font-size: clamp(2rem, 4vw, 6rem);
         line-height: 1;
+      }
+
+      p {
+        margin-bottom: .25rem;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: $orange;
+        text-decoration: underline;
+        text-decoration-color: rgba($orange, .25);
+
+        &:hover {
+          text-decoration-color: $orange;
+        }
       }
     }
 
@@ -42,55 +66,59 @@
       text-transform: uppercase;
       font-size: clamp(2rem, 3.5vw, 4.5rem);
       line-height: 1.4;
-  
+
       &:hover {
         background: $white;
         color: var(--button-color);
       }
     }
-  
+
     .twitter {
-      --button-color: #1DA1F2;
+      --button-color: #1da1f2;
     }
-  
+
     .facebook {
-      --button-color: #1778F2;
+      --button-color: #1778f2;
     }
-  
+
     .whatsapp {
-      --button-color: #25D366;
+      --button-color: #25d366;
     }
-  
+
     .telegram {
-      --button-color: #0088cc;
+      --button-color: #08c;
     }
   }
 
   .author {
-    margin: 3rem 0;
+    margin: 12vh 0 6vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+
     svg {
       height: 2rem;
       margin-bottom: 1rem;
     }
-  
+
     a {
       color: inherit;
       text-decoration: underline;
-  
+
       &:hover {
         color: $black;
       }
+    }
+
+    &-signature {
+      font-size: 1rem;
     }
   }
 }
 
 @media (max-width: $breakpoint-md) {
-  .section-footer  {
-    .calls-to-action {  
+  .section-footer {
+    .calls-to-action {
       grid-template-columns: 1fr;
 
       .mani {

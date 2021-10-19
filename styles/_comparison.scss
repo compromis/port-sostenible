@@ -43,6 +43,10 @@
     margin: 0 auto;
     text-align: center;
   }
+
+  p:not(:last-child) {
+    margin-bottom: 2vw;
+  }
 }
 
 .swipe-up-icon {

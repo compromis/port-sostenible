@@ -103,7 +103,7 @@
                   Es crearan milers de llocs de treball
                 </template>
                 <template #bottom>
-                  El personal del port ha denunciat queamb l'automatització de la terminal es poden destruir fins a 500 llocs de treball
+                  El personal del port ha denunciat que amb l'automatització de la terminal es poden destruir fins a 500 llocs de treball
                 </template>
               </floating-card>
             </div>
@@ -396,7 +396,7 @@
                   Un port més sostenible
                 </template>
                 <template #bottom>
-                  Millorarem totes les infraestructures del port, per fer-les més eficients i sostenibles, utilitzant millor el sól que ja té assignat i descentralitzat el port amb Sagunt i Castelló.
+                  Millorarem totes les infraestructures del port, per fer-les més eficients i sostenibles, utilitzant millor el sòl que ja té assignat i descentralitzat el port amb Sagunt i Castelló.
                 </template>
               </floating-card>
             </div>

@@ -495,6 +495,40 @@
           </div>
         </div>
       </section>
+      <footer id="footer" class="section-footer" data-scroll-section>
+        <h2>
+          No a l'ampliació del port
+        </h2>
+        <div class="container">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea com.
+          </p>
+          <div class="calls-to-action">
+            <div class="mani">
+              <h2>Acudeix a la manifestació</h2>
+              <p>Dia i hora de la manifestació</p>
+              <p>Lloc d'eixida de la manifestació</p>
+            </div>
+            <a href="https://twitter.com/intent/tweet/?text=&url=https://portsostenible.com&hashtags=NoAlAmpliacióDelPort" target="_blank" rel="noopener noreferer" class="cta twitter">Fes un Tweet</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://portsostenible.com" target="_blank" rel="noopener noreferer" class="cta facebook">Facebook</a>
+            <a href="whatsapp://send?text=https://portsostenible.com" class="cta whatsapp">Whatsapp</a>
+            <a href="https://t.me/share/url?url=https://portsostenible.com&text=" rel="noopener noreferer" target="_blank" class="cta telegram">Telegram</a>
+          </div>
+          <div class="author">
+            <a href="https://compromis.net" target="_blank" rel="noopener noreferer" aria-label="Compromís">
+              <compromis-logo />
+            </a>
+            <p>
+              <strong>#PortSostenible</strong> és una campanya de
+              <a href="https://compromis.net" target="_blank" rel="noopener noreferer" aria-label="Compromís">
+                Compromís
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </LocomotiveScroll>
   </main>
 </template>

@@ -24,27 +24,6 @@ h2 {
   justify-content: center;
   padding: $nav-bar-height 0;
 }
-/*
-.section-header {
-  font-size: clamp(4rem, 7vw, 9rem);
-
-  span,
-  strong {
-    display: block;
-    width: fit-content;
-    background: $black;
-    color: $white;
-    line-height: 0.9;
-    padding: .2em .1em 0 .1em;
-    margin-bottom: .1em;
-  }
-
-  strong {
-    background: $yellow;
-    color: $black;
-  }
-}
-*/
 
 .fade-enter-active,
 .fade-leave-active {
@@ -54,4 +33,10 @@ h2 {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+@media (min-width: $breakpoint-md) {
+  html {
+    overflow: hidden;
+  }
 }

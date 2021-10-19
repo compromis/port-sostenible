@@ -20,14 +20,17 @@
     bottom: 0;
     background-size: cover;
     background-position: center;
+    z-index: 2;
 
     &-a {
       background-image: url('../assets/beach-bn-zoom.webp');
+      background-color: $black;
     }
 
     &-b {
       background-image: url('../assets/beach-col-zoom.webp');
       clip-path: polygon(0 0, var(--progress) 0, var(--progress) 100%, 0% 100%);
+      background-color: $black;
     }
   }
 }

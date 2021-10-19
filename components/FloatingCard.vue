@@ -58,6 +58,10 @@ export default {
   border-radius: 1rem;
   border: 2px var(--card-outline) solid;
 
+  @supports not (aspect-ratio: auto) {
+    min-height: 30em;
+  }
+
   &-text {
     position: relative;
     z-index: 5;
@@ -69,7 +73,7 @@ export default {
       text-align: right;
       color: var(--card-accent);
       font-weight: bold;
-      max-width: 10ch;
+      max-width: 12ch;
       justify-self: end;
     }
 
@@ -105,6 +109,7 @@ export default {
       width: 1em;
       transform: scale(1.5);
       margin: 0 auto;
+      user-select: none;
     }
   }
 

@@ -66,7 +66,7 @@
                 data-scroll-sticky
                 data-scroll-target="#rail-header"
               >
-                <h2>Les conseqüències de <br> l'amplicació del port</h2>
+                <h2>Les conseqüències de <br> l'ampliació del port</h2>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@
       <div class="intro-paragraph" data-scroll-section>
         <div class="container">
           <p>
-            Com demostren aquestes imatges de l'Institut Cartogràfic València, la construcció del dic d'abric
+            Com demostren aquestes imatges de l'Institut Cartogràfic Valencià, la construcció del dic d'abric
             de l'ampliació del port de València ha sigut un desastre per al litoral sud de la ciutat.
             <strong>Més de 80 metres de platja han desaparegut per l'erosió, i el cordó dunar que protegeix
               el Parc Natural de l'Albufera de la seua salinització està en perill</strong>.
@@ -173,7 +173,7 @@
                   S’està escoltant a la ciutadania
                 </template>
                 <template #bottom>
-                  No, actuen de forma unilateral sense escoltar els veïns, els treballadors, els experts, conselleria, ni tampoc a l’Ajuntament
+                  No, actuen de forma unilateral sense escoltar el veïnat, els treballadors, les expertes, les conselleries o l’Ajuntament de València.
                 </template>
               </floating-card>
             </div>
@@ -376,7 +376,7 @@
                   Democratitzar el Port
                 </template>
                 <template #bottom>
-                  Volem que la ciutadania forme part del Consell d’Administració copat actualment per càrrecs polítics i empresarials
+                  Volem que la ciutadania també forme part del consell d'administració de la mà dels representants polítics.
                 </template>
               </floating-card>
             </div>
@@ -396,7 +396,7 @@
                   Un port més sostenible
                 </template>
                 <template #bottom>
-                  Millorarem totes les infraestructures del port, per fer-les més eficients i sostenibles, utilitzant millor el sòl que ja té assignat i descentralitzat el port amb Sagunt i Castelló.
+                  Millorarem totes les infraestructures del port, per fer-les més eficients i sostenibles, utilitzant millor el sòl que ja té assignat i descentralitzat el port amb Sagunt i Gandia.
                 </template>
               </floating-card>
             </div>

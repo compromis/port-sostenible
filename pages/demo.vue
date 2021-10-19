@@ -65,10 +65,18 @@
       </header>
       <div class="intro-paragraph" data-scroll-section>
         <div class="container">
-          <p data-scroll>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea com.
+          <p>
+            Com demostren aquestes imatges de l'Institut Cartogràfic València, la construcció del dic d'abric
+            de l'ampliació del port de València ha sigut un desastre per al litoral sud de la ciutat.
+            <strong>Més de 80 metres de platja han desaparegut per l'erosió, i el cordó dunar que protegeix
+              el Parc Natural de l'Albufera de la seua salinització està en perill</strong>.
+          </p>
+
+          <p>
+            En plena <strong>Emergència Climàtica</strong> no podem continuar apostant per infraestructures insostenibles
+            que atempten contra el nostre litoral, la nostra economia i la salut de la ciutadania.
+            I per això, des de <strong>Compromís</strong> defensarem un port sostenible, lliure d'especuladors i empresaris sense escrúpols.
+            <strong>Perquè volem un port per a València i no contra València.</strong>
           </p>
         </div>
       </div>
@@ -354,100 +362,100 @@
             <div class="card-wrapper">
               <floating-card type="proposal" number="1" data-scroll data-scroll-speed="2">
                 <template #top>
-                  Es crearan milers de llocs de treball
+                  Democratitzar el Port
                 </template>
                 <template #bottom>
-                  El personal del port ha denunciat queamb l'automatització de la terminal es poden destruir fins a 500 llocs de treball
+                  Volem que la ciutadania forme part del Consell d’Administració copat actualment per càrrecs polítics i empresarials
                 </template>
               </floating-card>
             </div>
             <div class="card-wrapper offset">
               <floating-card type="proposal" number="2" data-scroll data-scroll-speed="3">
                 <template #top>
-                  Té una avaluació ambiental vigent favorable
+                  Transferir les competències
                 </template>
                 <template #bottom>
-                  L’avaluació de 2007 està caducada
+                  Volem que el Port de València deixe de gestionar-ho Madrid i passe a mans de la Generalitat Valenciana.
                 </template>
               </floating-card>
             </div>
             <div class="card-wrapper">
               <floating-card type="proposal" number="3" data-scroll data-scroll-speed="2">
                 <template #top>
-                  Millorarà l’economia valenciana
+                  Un port més sostenible
                 </template>
                 <template #bottom>
-                  No, sols respon a l’avarícia d’una de les empreses més contaminants del planeta
+                  Millorarem totes les infraestructures del port, per fer-les més eficients i sostenibles, utilitzant millor el sól que ja té assignat i descentralitzat el port amb Sagunt i Castelló.
                 </template>
               </floating-card>
             </div>
             <div class="card-wrapper offset-mini">
               <floating-card type="proposal" number="4" data-scroll data-scroll-speed="3">
                 <template #top>
-                  No costarà ni un euro a la ciutadania
+                  Protegir llocs de treball
                 </template>
                 <template #bottom>
-                  Tindrà un cost directe de, com a mínim, 458 milions públics, el que valen 82 escoles públiques
+                  Realitzarem un estudi sobre les implicacions sociolaborals derivades de l’automatització i digitalització del sistema productiu portuari amb l'objectiu de millorar la situació laboral.
                 </template>
               </floating-card>
             </div>
             <div class="card-wrapper">
               <floating-card type="proposal" number="5" data-scroll data-scroll-speed="2">
                 <template #top>
-                  No afectarà l’Albufera ni les platges del sud
+                  Eliminar el dic d'abric
                 </template>
                 <template #bottom>
-                  Els dics del Port ja afecten les platges del sud, i posen en perill el parc natural de l’Albufera
+                  Garantirem la supervivència de l’Albufera, la marjal i les platges del sud i realitzar un pla de regeneració natural de les corrents marines que renoven la sorra de les platges del sud.
                 </template>
               </floating-card>
             </div>
             <div class="card-wrapper offset-mini">
               <floating-card type="proposal" number="6" data-scroll data-scroll-speed="3">
                 <template #top>
-                  El Port necessita l’ampliació per a ser competitiu
+                  Connectar l'Albufera i València
                 </template>
                 <template #bottom>
-                  El que necessita per a ser més competitiu és la connexió ferroviària del Corredor Mediterrani
+                  Crearem un gran corredor verd per a mitigar els efectes del canvi climàtic baixant la contaminació, creant una nova via d’accés sostenible i ajudant a moderar les altes temperatures de la ciutat.
                 </template>
               </floating-card>
             </div>
             <div class="card-wrapper">
               <floating-card type="proposal" number="7" data-scroll data-scroll-speed="2">
                 <template #top>
-                  L’ampliació ja està feta perquè els dics ja es van fer
+                  Impulsar el Corredor Mediterrani
                 </template>
                 <template #bottom>
-                  Queda la part més important del projecte, l’emplenament d’uns 250 camps de futbol de ciment i àrids
+                  Millorarem la connectivitat amb el ferrocarril per transport de mercaderies. El tren elèctric és molt més ecològic i barat per exportar els nostres productes que en camió.
                 </template>
               </floating-card>
             </div>
             <div class="card-wrapper offset-mini">
               <floating-card type="proposal" number="8" data-scroll data-scroll-speed="3">
                 <template #top>
-                  S’està escoltant a la ciutadania
+                  Renaturalitzem les platges
                 </template>
                 <template #bottom>
-                  No, actuen de forma unilateral sense escoltar els veïns, els treballadors, els experts, conselleria, ni tampoc a l’Ajuntament
+                  Impulsarem un pla de regeneració i renaturalització de les  platges del sud i del nord des d’una vessant sostenible per conservar-les.
                 </template>
               </floating-card>
             </div>
             <div class="card-wrapper">
               <floating-card type="proposal" number="9" data-scroll data-scroll-speed="2">
                 <template #top>
-                  El Port de Barcelona farà una ampliació
+                  Agenda 2030
                 </template>
                 <template #bottom>
-                  Barcelona la va aturar en 2020 per no ser viable econòmicament
+                  Exigir a l’Autoritat Portuària que s’adherisca a l’Agenda 2030 sobre el desenvolupament sostenible de Port-Ciutat perquè el port deixe d’estar d’esquenes a la ciutadania i a la ciutat.
                 </template>
               </floating-card>
             </div>
             <div class="card-wrapper offset-mini">
               <floating-card type="proposal" number="10" data-scroll data-scroll-speed="3">
                 <template #top>
-                  El govern d’Espanya ha  autoritzat l’ampliació
+                  Nou Pla Econòmic
                 </template>
                 <template #bottom>
-                  El govern ha traslladat a l’Autoritat Portuària (organisme independent), la recomanació de fer un nou informe ambiental
+                  Dissenyarem un nou Pla Econòmic i industrial basat en el model sostenible d’economia blava que incloga, entre altres, el Pla Estratègic de Mobilitat i el Pla d’Igualtat.
                 </template>
               </floating-card>
             </div>
@@ -500,16 +508,14 @@
           No a l'ampliació del port
         </h2>
         <div class="container">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea com.
+          <p class="conclusion">
+            Perquè volem un port per a València i no contra València.
           </p>
           <div class="calls-to-action">
             <div class="mani">
               <h2>Acudeix a la manifestació</h2>
-              <p>Dia i hora de la manifestació</p>
-              <p>Lloc d'eixida de la manifestació</p>
+              <p>Divendres, 22 d'octubre a les 18:30</p>
+              <p><a href="https://goo.gl/maps/4v1dWk2FwAGXwNZo6">Plaça Saragossa, València</a></p>
             </div>
             <a href="https://twitter.com/intent/tweet/?text=&url=https://portsostenible.com&hashtags=NoAlAmpliacióDelPort" target="_blank" rel="noopener noreferer" class="cta twitter">Fes un Tweet</a>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://portsostenible.com" target="_blank" rel="noopener noreferer" class="cta facebook">Facebook</a>
@@ -520,7 +526,7 @@
             <a href="https://compromis.net" target="_blank" rel="noopener noreferer" aria-label="Compromís">
               <compromis-logo />
             </a>
-            <p>
+            <p class="author-signature">
               <strong>#PortSostenible</strong> és una campanya de
               <a href="https://compromis.net" target="_blank" rel="noopener noreferer" aria-label="Compromís">
                 Compromís

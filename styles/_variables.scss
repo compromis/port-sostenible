@@ -28,7 +28,7 @@ $text-base-fallback: calc(.85rem + 1.25vw);
 $text-base: clamp(1.25rem, 2vw, 1.5rem);
 $text-m: 1.5rem;
 $text-lg-fallback: calc(1.25rem + 1.75vw);
-$text-lg: clamp(1.5rem, 1.75vw, 2.15rem);
+$text-lg: clamp(1.25rem, 1.75vw, 2.15rem);
 
 // Breakpoints
 $breakpoint-sm: 576px;

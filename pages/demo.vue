@@ -304,7 +304,7 @@
                 playsinline
                 muted
               >
-                <source src="../assets/videos/estibadores.mp4" type="video/mp4">
+                <source src="~assets/videos/estibadores.mp4" type="video/mp4">
               </video>
             </div>
             <div>
@@ -320,6 +320,27 @@
             </div>
           </a>
           <div class="line" data-scroll />
+        </div>
+      </section>
+      <section id="consensus" class="consensus" data-scroll-section>
+        <div class="container">
+          <h2 class="section-header" data-scroll data-scroll-offset="20%,0">
+            <span>Una ampliació</span>
+            <strong>sense consens</strong>
+          </h2>
+          <div class="consensus-cols">
+            <ul class="consensus-list consensus-against">
+              <consensus-list-item icon="ajuntament" name="Ajuntament" stance="against" data-scroll data-scroll-offset="20%,0" />
+              <consensus-list-item icon="generalitat" name="Generalitat" stance="against" data-scroll data-scroll-offset="20%,0" />
+              <consensus-list-item icon="estibadors" name="Estibadors" stance="against" data-scroll data-scroll-offset="20%,0" />
+              <consensus-list-item icon="veinat" name="Veïnat" stance="against" data-scroll data-scroll-offset="20%,0" />
+              <consensus-list-item icon="ecologistes" name="Ecologistes" stance="against" data-scroll data-scroll-offset="20%,0" />
+            </ul>
+            <ul class="consensus-list consensus-for">
+              <consensus-list-item icon="empresaris" name="Empresaris" stance="for" data-scroll data-scroll-offset="20%,0" />
+              <consensus-list-item icon="vlcportauthority" name="Autoritat portuària" stance="for" data-scroll data-scroll-offset="20%,0" />
+            </ul>
+          </div>
         </div>
       </section>
       <section id="Proposals" class="proposals cards-section" data-scroll-section>
@@ -479,49 +500,9 @@
 </template>
 
 <script>
+import ComparisonMixin from '@/mixins/comparison-mixin'
+
 export default {
-
-  data () {
-    return {
-      widthComparison: 0,
-      scrolled: false
-    }
-  },
-
-  computed: {
-    comparisonProgress () {
-      return this.widthComparison + '%'
-    }
-  },
-
-  mounted () {
-    window.addEventListener('scroll', this.handleScrollWindow)
-    this.$refs.scroller.locomotive.on('scroll', this.handleScroll)
-    this.$refs.scroller.locomotive.update()
-  },
-
-  methods: {
-    handleScroll ({ scroll }) {
-      const vh = window.innerHeight * 0.01
-      const progress = (scroll.y * 100) / (175 * vh)
-      this.scrolled = scroll.y > 10
-      this.widthComparison = progress > 100 ? 100 : progress
-    },
-
-    handleScrollWindow () {
-      requestAnimationFrame(() => {
-        const vh = window.innerHeight * 0.01
-        const progress = (window.scrollY * 100) / (200 * vh)
-        this.scrolled = window.scrollY > 10
-        this.widthComparison = progress > 100 ? 100 : progress
-      })
-    }
-  }
+  mixins: [ComparisonMixin]
 }
 </script>
-
-<style lang="scss">
-.hello {
-  color: world;
-}
-</style>

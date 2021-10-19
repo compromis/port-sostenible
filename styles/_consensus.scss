@@ -1,0 +1,138 @@
+.consensus {
+  padding: 5vw 0;
+  margin-top: -1rem;
+  background: $black;
+  color: $white;
+
+  .section-header {
+    text-align: center;
+    font-size: clamp(5rem, 9vw, 9.5rem);
+    line-height: 1;
+    margin-bottom: 2vw;
+
+    span,
+    strong {
+      display: inline-block;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateY(-30%);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    strong {
+      color: $red;
+      transition-delay: .5s;
+    }
+
+    &.is-inview {
+      span,
+      strong {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+  }
+
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      border: 2px $white solid;
+      padding: 1em;
+      font-size: $text-lg;
+      margin-bottom: 2vw;
+      opacity: 0;
+      transition: opacity .5s ease;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-icon {
+      display: grid;
+      place-items: center;
+      width: 2em;
+      text-align: center;
+      margin: -.6em;
+      margin-right: .5em;
+      position: relative;
+
+      img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+      }
+    }
+
+    &-name {
+      margin-right: .5em;
+      line-height: 1;
+    }
+
+    &-stance {
+      padding: .4em .8em;
+      margin: -.6em;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      transform: scale(2) rotate(8deg);
+      transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition-delay: .5s;
+    }
+  }
+
+  &-against &-list-stance {
+    background: $red;
+  }
+
+  &-for &-list-stance {
+    background: $green;
+  }
+
+  li.is-inview {
+    opacity: 1;
+
+    .consensus-list-stance {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .consensus {
+    &-cols {
+      grid-template-columns: 1fr;
+    }
+
+    &-list-stance {
+      width: 6.5em;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .section-header,
+    .consensus-list li,
+    .consensus-list-stance {
+      opacity: 1;
+    }
+  }
+}

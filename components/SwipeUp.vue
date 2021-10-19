@@ -34,7 +34,7 @@ export default {
     opacity: 0;
   }
 
-  20% {
+  30% {
     opacity: 1;
   }
 

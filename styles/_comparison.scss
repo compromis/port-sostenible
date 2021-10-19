@@ -46,13 +46,18 @@
 }
 
 .swipe-up-icon {
+  --rotate: 0deg;
+
   position: absolute;
   bottom: 2rem;
   width: 4rem;
   height: 4rem;
   transition: .5s ease;
+  transform: rotate(var(--rotate)) translateY(var(--translate, 0));
 
   &.scrolled {
+    --translate: -20%;
+
     opacity: 0;
   }
 }
@@ -198,5 +203,13 @@
 
   .intro-paragraph {
     margin-top: -25vh;
+  }
+
+  .swipe-up-icon {
+    --rotate: 180deg;
+
+    &.scrolled {
+      --translate: 20%;
+    }
   }
 }

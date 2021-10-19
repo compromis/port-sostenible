@@ -22,11 +22,11 @@
     background-position: center;
 
     &-a {
-      background-image: url('../assets/beach-bn.webp');
+      background-image: url('../assets/beach-bn-zoom.webp');
     }
 
     &-b {
-      background-image: url('../assets/beach-col.webp');
+      background-image: url('../assets/beach-col-zoom.webp');
       clip-path: polygon(0 0, var(--progress) 0, var(--progress) 100%, 0% 100%);
     }
   }

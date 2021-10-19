@@ -8,6 +8,15 @@
         smartphone: { smooth: false, breakpoint: 0 }
       }"
     >
+      <nav :class="['nav',{'hide-nav': widthComparison > 99 }]">
+        <h1>Per un port sostenible</h1>
+        <div class="logo">
+          <a href="https://compromis.net">
+            <span class="sr-only">Compromís</span>
+            <div class="logo-wrapper"><compromis-logo mono aria-hidden /></div>
+          </a>
+        </div>
+      </nav>
       <header id="Comparison" class="comparison">
         <div data-scroll-section class="comparison-section images">
           <div data-scroll data-scroll-repeat class="comparison-section-wrapper">

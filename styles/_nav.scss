@@ -9,6 +9,8 @@
   padding: 1rem;
   color: $white;
   font-size: $text-base;
+  opacity: 1;
+  transition: .5s ease-in-out;
 
   h1 {
     font-size: inherit;
@@ -26,6 +28,10 @@
       height: 1.2em;
     }
   }
+}
+
+.hide-nav {
+  opacity: 0;
 }
 
 .logo-wrapper {

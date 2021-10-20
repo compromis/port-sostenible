@@ -356,7 +356,7 @@
               <consensus-list-item icon="ecologistes" name="Ecologistes" stance="against" data-scroll data-scroll-offset="20%,0" />
             </ul>
             <ul class="consensus-list consensus-for">
-              <consensus-list-item icon="empresaris" name="Empresaris" stance="for" data-scroll data-scroll-offset="20%,0" />
+              <consensus-list-item icon="empresaris" name="Empreses contaminants" stance="for" data-scroll data-scroll-offset="20%,0" />
               <consensus-list-item icon="vlcportauthority" name="Autoritat portuària" stance="for" data-scroll data-scroll-offset="20%,0" />
             </ul>
           </div>
@@ -524,7 +524,7 @@
           </p>
           <div class="calls-to-action">
             <div class="mani">
-              <h2>Acudeix a la manifestació</h2>
+              <h2>Vine a la manifestació</h2>
               <p>Divendres, 22 d'octubre a les 18:30</p>
               <p><a href="https://goo.gl/maps/4v1dWk2FwAGXwNZo6">Plaça Saragossa, València</a></p>
             </div>

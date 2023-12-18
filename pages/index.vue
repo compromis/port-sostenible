@@ -53,7 +53,7 @@
                 data-scroll-sticky
                 data-scroll-target="#rail-2021"
               >
-                2021
+                {{ new Date().getFullYear() }}
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@
                   No costarà ni un euro a la ciutadania
                 </template>
                 <template #bottom>
-                  Tindrà un cost directe de, com a mínim, 458 milions públics, el mateix que valen 82 escoles públiques.
+                  Tindrà un cost directe de, com a mínim, 660 milions públics, el mateix que valen més de 100 escoles públiques.
                 </template>
               </floating-card>
             </div>
@@ -349,8 +349,6 @@
           </h2>
           <div class="consensus-cols">
             <ul class="consensus-list consensus-against">
-              <consensus-list-item icon="ajuntament" name="Ajuntament" stance="against" data-scroll data-scroll-offset="20%,0" />
-              <consensus-list-item icon="generalitat" name="Generalitat" stance="against" data-scroll data-scroll-offset="20%,0" />
               <consensus-list-item icon="estibadors" name="Estibadors" stance="against" data-scroll data-scroll-offset="20%,0" />
               <consensus-list-item icon="veinat" name="Veïnat" stance="against" data-scroll data-scroll-offset="20%,0" />
               <consensus-list-item icon="ecologistes" name="Ecologistes" stance="against" data-scroll data-scroll-offset="20%,0" />
@@ -523,11 +521,6 @@
             Perquè volem un port per a València i no contra València.
           </p>
           <div class="calls-to-action">
-            <div class="mani">
-              <h2>Vine a la manifestació</h2>
-              <p>Divendres, 22 d'octubre a les 18:30</p>
-              <p><a href="https://goo.gl/maps/4v1dWk2FwAGXwNZo6">Plaça Saragossa, València</a></p>
-            </div>
             <a href="https://twitter.com/intent/tweet/?text=&url=https://portsostenible.com&hashtags=NoAlAmpliacióDelPort" target="_blank" rel="noopener noreferer" class="cta twitter">Fes un Tweet</a>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://portsostenible.com" target="_blank" rel="noopener noreferer" class="cta facebook">Facebook</a>
             <a href="whatsapp://send?text=https://portsostenible.com" class="cta whatsapp">Whatsapp</a>
